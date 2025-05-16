@@ -1,0 +1,217 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+    // -------------------------------------------------------------------------
+    // Global configuration
+    // -------------------------------------------------------------------------
+
+    "layer": "top",
+
+    "position": "top",
+
+    // If height property would be not present, it'd be calculated dynamically
+    "height": 28,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/mode",
+        "memory",
+        "cpu",
+        "temperature",
+
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+//      "custom/keyboard-layout",
+        "bluetooth",
+        "network",
+        "backlight",
+        "pulseaudio",
+        "tray",
+        "clock",
+        "battery",
+        "custom/power"
+
+
+
+
+    ],
+
+
+    // -------------------------------------------------------------------------
+    // Modules
+    // -------------------------------------------------------------------------
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": "{icon}   {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "{icon}  {capacity}%",
+        "format-icons": [
+            "󰁻",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip": true
+    },
+
+    "clock": {
+        "format": "   {:%I:%M %p    %d %m}",
+        "tooltip-format": "{:%e %B %Y}"
+
+    },
+
+
+    "cpu": {
+        "interval": 5,
+        "format": "   {usage}%", // Icon: microchip
+        "states": {
+          "warning": 70,
+          "critical": 90
+        }
+    },
+
+    "custom/keyboard-layout": {
+      "exec": "hyprlandmsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+      // Interval set only as a fallback, as the value is updated by signal
+      "interval": 30,
+      "format": "  {}", // Icon: keyboard
+      // Signal sent by hyprland key binding (~/.config/hyprland/key-bindings)
+      "signal": 1, // SIGHUP
+      "tooltip": false
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "     {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90,
+            "on-click": "kitty htop"
+        }
+    },
+
+    "network": {
+        "format": "  ",
+        "format-wifi": "  ",
+        "format-ethernet":"  ",
+        "format-disconnected": "  ",
+        "tooltip-format-disconnected": "Error",
+        "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} 🖧 ",
+        "on-click": "kitty nmtui"
+    },
+
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 60
+    },
+
+    "hyprland/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1:www": "龜", // Icon: firefox-browser
+            "2:mail": "", // Icon: mail
+            "3:editor": "", // Icon: code
+            "4:terminals": "", // Icon: terminal
+            "5:portal": "", // Icon: terminal
+            "urgent": "",
+            "focused": " ",
+            "default": " ",
+           "active": " "
+        }
+    },
+
+    "pulseaudio": {
+        "scroll-step": 3,
+        "format": "{icon}    {volume}%",
+        "format-bluetooth": "{icon}    {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+
+    },
+
+    "temperature": {
+      "critical-threshold": 80,
+      "interval": 5,
+      "format": "{icon}  {temperatureC}°C",
+      "format-icons": [
+          "", // Icon: temperature-empty
+          "", // Icon: temperature-quarter
+          "", // Icon: temperature-half
+          "", // Icon: temperature-three-quarters
+          ""  // Icon: temperature-full
+      ],
+      "tooltip": true
+    },
+
+    "bluetooth": {
+        "format-on": "󰂯",
+        "format-off": " BT-off ",
+        "format-disabled": "󰂲",
+        "format-connected-battery": "{device_battery_percentage}% 󰂯",
+        "format-alt": "{device_alias}󰂯",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+        "on-click-right": "blueman-manager",
+    }, 
+
+	"custom/power": {
+		"format": "   ",
+		"on-click": "wlogout",
+//      "on-click-right": "systemctl suspend",
+//        "on-click": "bash $HOME/.config/waybar/scripts/poweroff.sh"
+
+	},
+
+    "backlight": {
+        "device": "intel_backlight",
+        "interval": 1,
+        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "brightnessctl set +5%",
+        "format": "{icon} {percent}% ",
+        "format-icons": ["   ", "   "],
+        "on-click": "wdisplays"
+    },
+
+    },
+    "tray": {
+        "icon-size":18,
+        "spacing": 5
+    },
+
+}
