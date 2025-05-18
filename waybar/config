@@ -24,6 +24,8 @@
         "memory",
         "cpu",
         "temperature",
+        "custom/update"
+
 
     ],
     "modules-center": [
@@ -40,15 +42,20 @@
         "battery",
         "custom/power"
 
-
-
-
     ],
 
 
     // -------------------------------------------------------------------------
     // Modules
     // -------------------------------------------------------------------------
+
+    "custom/update":{
+        "format": " 󰚰 ",
+        "on-click": "kitty yay -Syu"
+
+
+    },
+
 
     "battery": {
         "interval": 10,
@@ -57,9 +64,9 @@
             "critical": 15
         },
         // Connected to AC
-        "format": "{icon}   {capacity}%", // Icon: bolt
+        "format": "󰂄 {capacity}%", // Icon: bolt
         // Not connected to AC
-        "format-discharging": "{icon}  {capacity}%",
+        "format-discharging": "{icon} {capacity}%",
         "format-icons": [
             "󰁻",
             "󰁼",
@@ -99,12 +106,14 @@
 
     "memory": {
         "interval": 5,
-        "format": "     {}%", // Icon: memory
+        "format": "    {}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90,
-            "on-click": "kitty htop"
-        }
+        },
+        "on-click": "kitty htop"
+
+
     },
 
     "network": {
@@ -133,15 +142,10 @@
         "disable-scroll": false,
         "format": "{icon}",
         "format-icons": {
-            "1:www": "龜", // Icon: firefox-browser
-            "2:mail": "", // Icon: mail
-            "3:editor": "", // Icon: code
-            "4:terminals": "", // Icon: terminal
-            "5:portal": "", // Icon: terminal
             "urgent": "",
-            "focused": " ",
-            "default": " ",
-           "active": " "
+            //"focused": " ",
+            //"default": " ",
+            //"active": " "
         }
     },
 
