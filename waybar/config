@@ -111,7 +111,7 @@
             "warning": 70,
             "critical": 90,
         },
-        "on-click": "kitty htop"
+        "on-click": "kitty btop"
 
 
     },
