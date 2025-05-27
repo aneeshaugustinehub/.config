@@ -41,6 +41,7 @@
 tooltip {
     background-color: #1d2021;
     border: 2px solid #7c6f64;
+    border-radius: 2px;
 }
 
 * {
@@ -182,6 +183,8 @@ tooltip {
 }
 
 #tray {
+    padding-left: 5px;
+    padding-right: 5px;
     /* No styles */
 }
 
