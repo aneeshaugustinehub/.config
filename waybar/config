@@ -23,7 +23,8 @@
         "memory",
         "cpu",
         "temperature",
-        "custom/gpu-usage",
+//        "custom/gpu-usage",
+        "custom/speed",
         "custom/update"
 
 
@@ -50,13 +51,13 @@
     // Modules
     // -------------------------------------------------------------------------
 
-    "custom/gpu-usage": {
-        "format": "{} {icon}",
-        "exec": "gpu-usage-waybar",
-        "return-type": "json",
-        "format-icons": "󰾲",
-        "on-click": "kitty -e nvtop",
-},
+//    "custom/gpu-usage": {
+//        "format": "{icon} {} ",
+//        "exec": "gpu-usage-waybar",
+//        "return-type": "json",
+//        "format-icons": "󰾲",
+//        "on-click": "kitty -e nvtop",
+//},
     "custom/update":{
         "format": " 󰚰 ",
         "on-click": "kitty yay -Syu"
@@ -124,13 +125,21 @@
 
     },
 
+    "custom/speed": {
+    "interface": "wlan0", // Replace with your network interface (e.g., eth0 for Ethernet)
+    "format": "{ifname}: ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+    "format-ethernet": "{ifname}: ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+    "format-wifi": "{essid}: ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+    },
+
     "network": {
+        "interval": 1,
         "format": "  ",
-        "format-wifi": "  ",
-        "format-ethernet":"  ",
+        "format-wifi": "     {bandwidthDownBytes}    {bandwidthUpBytes} ",
+        "format-ethernet":"     {bandwidthDownBytes}    {bandwidthUpBytes} ",
         "format-disconnected": "  ",
         "tooltip-format-disconnected": "Error",
-        "tooltip-format-wifi": "  {essid} ({signalStrength}%)",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} 🖧 ",
         "on-click": "kitty nmtui"
     },
