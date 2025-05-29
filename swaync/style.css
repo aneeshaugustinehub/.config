@@ -22,7 +22,7 @@
     outline:none;
 }
 .control-center .notification-row {
-    background-color: unset;
+    background-color: rgba(255,255,255, .02);
 }
 .control-center .notification-row .notification-background .notification,
 .control-center .notification-row .notification-background .notification .notification-content,
