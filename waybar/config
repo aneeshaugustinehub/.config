@@ -84,7 +84,9 @@
             "󰂂",
             "󰁹"
         ],
-        "tooltip": true
+        "tooltip": true,
+        "on-click": "auto-cpufreq"
+
     },
 
     "clock": {
@@ -120,7 +122,7 @@
             "warning": 70,
             "critical": 90,
         },
-        "on-click": "kitty btop"
+        "on-click-right": "kitty btop"
 
 
     },
