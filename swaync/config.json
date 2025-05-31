@@ -4,9 +4,9 @@
   "positionY": "top",
 	"cssPriority": "user",
 
-  "control-center-width": 380,
-  "control-center-height": 800, 
-  "control-center-margin-top": 2,
+  "control-center-width": 390,
+  "control-center-height": 850, 
+  "control-center-margin-top": 1,
   "control-center-margin-bottom": 2,
   "control-center-margin-right": 1,
   "control-center-margin-left": 0,
@@ -59,7 +59,7 @@
     },
     "label": {
       "max-lines": 1,
-      "text": " "
+      "text": "o_o"
     },
     "mpris": {
       "image-size": 96,
@@ -90,8 +90,27 @@
         {
           "label": "󰏘",
           "command": "nwg-look"
+        },
+        {
+          "label": "󰧕",
+          "command": "kitty yay -Syu"
+        },
+        {
+          "label": "",
+          "command": "wlogout"
+        },
+        {
+          "label": "󰃢",
+          "command": "kitty yay -Scc"
+        },
+        {
+          "label": "󰸽",
+          "command": ""
+        },
+        {
+          "label": "󰈐",
+          "command": ""
         }
-        
       ]
     }
   }

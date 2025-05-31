@@ -1,8 +1,9 @@
 @define-color text            rgb(255, 255, 255);
-@define-color background-alt  rgba(55, 29, 55, 0.524);
+@define-color background-alt  rgb(59, 26, 59); 
 @define-color selected        rgb(255, 78, 255);
 @define-color hover           rgb(209, 106, 209);
 @define-color urgent          rgb(255, 239, 255);
+@define-color background      rgba(36, 32, 36, 0.83); 
 
 * {
 
