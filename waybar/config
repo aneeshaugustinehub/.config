@@ -15,7 +15,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 20,
+    "height": 24,
 
     "modules-left": [
         "custom/wofi",
@@ -244,9 +244,9 @@
             "transition-left-to-right": false
         },
         "modules": [
-        "cpu",
-        "memory",
-        "temperature",
+            "temperature",
+            "cpu",
+            "memory",
         ]
     },
 }
