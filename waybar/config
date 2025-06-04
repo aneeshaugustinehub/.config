@@ -18,17 +18,9 @@
     "height": 20,
 
     "modules-left": [
-        "custom/swaync",
+        "custom/wofi",
         "hyprland/workspaces",
-        "hyprland/mode",
-        "memory",
-        "cpu",
-        "temperature",
-//        "custom/gpu-usage",
-        "custom/network",
-
-
-
+        "group/hardware"
     ],
     "modules-center": [
         "hyprland/window"
@@ -42,7 +34,10 @@
         "tray",
         "clock",
         "battery",
-        "custom/power"
+//        "custom/power"
+        "custom/swaync",
+
+        
 
     ],
 
@@ -65,12 +60,17 @@
 //    },
 
     "custom/swaync":{
-        "format": "  ",
+        "format": "  ",
         "on-click": "swaync-client -t -sw",
         "tooltip": false,
     },
-     
 
+        "custom/wofi":{
+        "format": "  ",
+        "on-click": "wofi",
+        "tooltip": false,
+    },
+     
 	"custom/power": {
 		"format": "   ",
 		"on-click": "wlogout",
@@ -81,7 +81,6 @@
 	},
 
     "custom/network": {
-        "interval": 1,
         "format": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
         "format-ethernet": " ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
         "format-wifi": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
@@ -159,10 +158,6 @@
         "on-click": "kitty nmtui"
     },
 
-    "hyprland/mode": {
-        "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
-        "tooltip": false
-    },
 
     "hyprland/window": {
         "format": "{}",
@@ -214,7 +209,7 @@
 
     "bluetooth": {
         "format-on": "󰂯",
-        "format-off": " BT-off ",
+        "format-off": "󰂲",
         "format-disabled": "󰂲",
         "format-connected-battery": "{device_battery_percentage}% 󰂯",
         "format-alt": "{device_alias}󰂯",
@@ -235,10 +230,23 @@
         "on-click": "wdisplays"
     },
 
-    },
     "tray": {
         "icon-size":18,
         "spacing": 10
     },
 
+    "group/hardware": {
+        "format": "  ",
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-hardware",
+            "transition-left-to-right": false
+        },
+        "modules": [
+        "cpu",
+        "memory",
+        "temperature",
+        ]
+    },
 }

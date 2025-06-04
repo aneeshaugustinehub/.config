@@ -65,11 +65,10 @@ tooltip {
 
 }
 
-/* The whole bar */
 #waybar {
     background: rgba(162, 0, 255, 0.072);
     color: @textcolour;
-    font-family: Cantarell, Noto Sans, sans-serif;
+    font-family: "JetBrainsMono Nerd Font", "sans-serif"; 
     font-size: 13px;
 
 }
