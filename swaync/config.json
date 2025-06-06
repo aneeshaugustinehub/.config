@@ -93,11 +93,7 @@
         },
         {
           "label": "󰧕",
-          "command": "kitty yay -Syu"
-        },
-        {
-          "label": "",
-          "command": "wlogout"
+          "command": "kitty -e yay -Syu"
         },
         {
           "label": "󰃢",
@@ -105,11 +101,15 @@
         },
         {
           "label": "󰸽",
-          "command": ""
+          "command": "kitty fastfetch"
         },
         {
           "label": "󰈐",
           "command": ""
+        },
+        {
+          "label": "",
+          "command": "wlogout"
         }
       ]
     }
