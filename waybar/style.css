@@ -66,7 +66,7 @@ tooltip {
 }
 
 #waybar {
-    background: rgba(162, 0, 255, 0.072);
+    background: rgba(45, 41, 46, 0.899);
     color: @textcolour;
     font-family: "JetBrainsMono Nerd Font", "sans-serif"; 
     font-size: 13px;
