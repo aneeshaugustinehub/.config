@@ -149,7 +149,8 @@
         "tooltip-format-disconnected": "Error",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits} ",
         "tooltip-format-ethernet": "{ifname} 🖧 ",
-        "on-click": "kitty nmtui"
+        "on-click-right": "kitty nmtui",
+        "on-click": "nm-connection-editor"
     },
 
 
