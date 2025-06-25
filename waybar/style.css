@@ -10,12 +10,15 @@
  * colours
  * -------------------------------------------------------------------------- */
 
-@define-color	base  #1e1e2e;
-@define-color	bgcolour rgb(66, 18, 62);
+@define-color	base  rgb(30, 30, 46);
+@define-color	bgcolour rgba(58, 24, 53, 0.619);
 @define-color	textcolour rgb(204, 167, 201);
+@define-color	bordercolour rgb(124, 111, 100);
+
 
 democl{
         background-color: rgb(204, 167, 201);
+
 }
 
 /* -----------------------------------------------------------------------------
@@ -51,8 +54,8 @@ democl{
 
 /* Reset all styles */
 tooltip {
-    background-color: #1d2021;
-    border: 2px solid #7c6f64;
+    background-color: @base ;
+    border: 2px solid @bordercolour;
     border-radius: 2px;
 }
 

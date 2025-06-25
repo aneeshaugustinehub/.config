@@ -27,14 +27,15 @@
     ],
     "modules-right": [
       "custom/keyboard-layout",
-        "bluetooth",
-        "network",
+        "group/network",
         "backlight",
         "pulseaudio",
         "tray",
         "clock",
         "battery",
-        "custom/swaync",
+        "custom/swaync"
+//        "custom/power",
+
 
         
 
@@ -67,10 +68,8 @@
      
 	"custom/power": {
 		"format": "   ",
-		"on-click": "wlogout",
+		"on-click": " exec, /home/av/.config/wofi/powermenu/powermenu.sh",
         "tooltip": false,
-//      "on-click-right": "systemctl suspend",
-//        "on-click": "bash $HOME/.config/waybar/scripts/poweroff.sh"
 
 	},
 
@@ -106,7 +105,8 @@
 
     "clock": {
         "format": "   {:%I:%M %p    %d-%m-%y}",
-        "tooltip-format": "{:%e %B %Y}"
+//        "tooltip-format": "{:%e %B %Y}"
+        "tooltip-format": "<span font='IBM Plex Mono Bold 13'><big>{:%d %B}</big>\n<tt><small>{calendar}</small></tt></span>",
 
     },
 
@@ -202,11 +202,11 @@
     },
 
     "bluetooth": {
-        "format-on": "󰂯",
-        "format-off": "󰂲",
-        "format-disabled": "󰂲",
+        "format-on": "󰂯 on",
+        "format-off": "󰂲 off",
+        "format-disabled": "󰂲 dis",
         "format-connected-battery": "{device_battery_percentage}% 󰂯",
-        "format-alt": "{device_alias}󰂯",
+        "format-alt": "{device_alias}󰂯 ",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
@@ -226,7 +226,7 @@
 
     "tray": {
         "icon-size":18,
-        "spacing": 10
+        "spacing": 9
     },
 
     "group/hardware": {
@@ -241,6 +241,21 @@
             "temperature",
             "cpu",
             "memory",
+        ]
+    },
+
+
+    "group/network": {
+        "format": "  ",
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "not-hardware",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "network",
+            "bluetooth",
         ]
     },
 }

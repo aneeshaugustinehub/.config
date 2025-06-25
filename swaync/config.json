@@ -88,7 +88,7 @@
           "command": "blueman-manager"
         },
         {
-          "label": "󰏘",
+          "label": "󰸉",
           "command": "waypaper"
         },
         {
@@ -96,16 +96,17 @@
           "command": "kitty -e yay -Syu"
         },
         {
-          "label": "󰃢",
-          "command": "kitty yay -Scc"
+          "label": "󰏘",
+          "command": "nwg-look"
         },
         {
           "label": "󰸽",
           "command": "kitty fastfetch"
         },
         {
-          "label": "󰈐",
-          "command": ""
+
+                "label": "󰃢",
+          "command": "kitty yay -Scc"
         },
         {
           "label": "",
