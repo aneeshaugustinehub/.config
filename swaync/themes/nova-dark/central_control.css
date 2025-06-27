@@ -2,8 +2,7 @@
 
 
 * {
-  color:            @text;
-
+  color:            @textcolour;
   all: unset;
   font-size: 14px;
   font-family: "JetBrains Mono Nerd Font 10";
@@ -12,7 +11,7 @@
 }
 
 shshs{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
 
 }
 
@@ -24,7 +23,7 @@ shshs{
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
-  background: alpha(@background, .85);
+  background: alpha(@background-alt, .85);
   border-radius: 15px;
   border: 1px solid @selected;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
@@ -35,14 +34,14 @@ shshs{
 /* Notifications  */
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
-  background-color: @background-alt;
+  background-color: @background;
   border-radius: 16px;
   margin: 4px 0px;
   padding: 4px;
 }
 
 .control-center .notification-row .notification-background .notification.critical {
-  color: @urgent;
+  color: @critical;
 }
 
 .control-center .notification-row .notification-background .notification .notification-content {
@@ -56,13 +55,13 @@ shshs{
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
   background: alpha(@selected, .6);
-  color: @text;
+  color: @textcolour;
   border-radius: 12px;
   margin: 6px;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
-  background: @selected;
+  background: @hover;
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
@@ -74,13 +73,13 @@ shshs{
 .control-center .notification-row .notification-background .close-button {
   background: transparent;
   border-radius: 6px;
-  color: @text;
+  color: @textcolour;
   margin: 0px;
   padding: 4px;
 }
 
 .control-center .notification-row .notification-background .close-button:hover {
-  background-color: @selected;
+  background-color: @hover;
 }
 
 .control-center .notification-row .notification-background .close-button:active {
@@ -94,7 +93,7 @@ trough {
 }
 
 progressbar {
-  background-color: rgba(255,255,255,.1);
+  background-color: rgb(76, 0, 255);
 }
 
 /* Notifications expanded-group */
@@ -106,18 +105,18 @@ progressbar {
 .notification-group-headers {
   font-weight: bold;
   font-size: 1.25rem;
-  color: @text;
+  color: @textcolour;
   letter-spacing: 2px;
 }
 
 .notification-group-icon {
-  color: @text;
+  color: @textcolour;
 }
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
   background: transparent;
-  color: @text;
+  color: @textcolour;
   margin: 4px; 
   border-radius: 6px;
   padding: 4px;
@@ -137,7 +136,7 @@ progressbar {
 }
 
 .widget-title button {
-  background: @background-alt;
+  background: @button;
   border-radius: 6px;
   padding: 4px 16px;
 }
@@ -157,7 +156,7 @@ progressbar {
 }
 
 .widget-dnd > switch {
-  background: @background-alt;
+  background: @button;
   font-size: initial;
   border-radius: 8px;
   box-shadow: none;
@@ -177,7 +176,7 @@ progressbar {
 }
 
 .widget-dnd > switch slider {
-  background: @text;
+  background: @textcolour;
   border-radius: 6px;
 }
 
@@ -187,7 +186,7 @@ progressbar {
   padding: 6px 2px;
   margin: 6px;
   border-radius: 12px;
-  background: @background-alt;
+  background: @background;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
@@ -206,29 +205,29 @@ progressbar {
 .widget-mpris {
     background: @background-alt;
     border-radius: 16px;
-    color: @text;
+    color: @textcolour;
     margin:  20px 6px;
 }
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
 .widget-mpris-player {
-    background-color: @background-sec;
+    background-color: @background-alt;
     border-radius: 22px;
     padding: 6px 14px;
     margin: 6px;
 }
 
 .widget-mpris > box > button {
-  color: @text;
+  color: @textcolour;
   border-radius: 20px;
 }
  
 .widget-mpris button {
-  color: alpha(@text, .6);
+  color: alpha(@textcolour, .6);
 }
 
 .widget-mpris button:hover {
-  color: @text;
+  color: @hover;
 }
 
 .widget-mpris-album-art {
@@ -247,7 +246,7 @@ progressbar {
 
 /* Volume */
 .widget-volume {
-  background: @background-sec;
+  background: @background-alt;
   color: @background;
   padding: 4px;
   margin: 6px;

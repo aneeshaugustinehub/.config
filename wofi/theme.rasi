@@ -9,7 +9,7 @@ configuration {
 	window-format:              "{w} · {c} · {t}";
 }
 
-@theme '/home/himanshu/.cache/wal/colors.rasi'
+@theme '/home/av/.config/colour/color.css'
 
 /*****----- Main Window -----*****/
 window {

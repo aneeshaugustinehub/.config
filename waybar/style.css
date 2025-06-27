@@ -158,7 +158,7 @@ tooltip {
 }
 
 #mode {
-    background: #64727D;
+    background: #0091ff;
     border-top: 2px solid white;
     /* To compensate for the top border and still have vertical centering */
     padding-bottom: 2px;

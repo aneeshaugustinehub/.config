@@ -1,19 +1,8 @@
-@define-color text            rgb(255, 255, 255);
-@define-color background-alt  rgb(59, 26, 59); 
-@define-color selected        rgb(255, 78, 255);
-@define-color hover           rgb(209, 106, 209);
-@define-color urgent          rgb(255, 239, 255);
-@define-color background      rgba(36, 32, 36, 0.83); 
+@import url("/home/av/.config/colour/color.css");
+
 
 * {
-
-  /*background-alt:        @color1;      Buttons background */
-  /*selected:              @color2;      Button selected */
-  /*hover:                 @color5;      Hover button */
-  /*urgent:                @color6;      Urgency critical */
-  /*text-selected:         @background; */
-
-  color: @text;
+  color: @textcolour;
 
   all: unset;
   font-size: 14px;

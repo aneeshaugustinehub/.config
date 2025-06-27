@@ -4,7 +4,7 @@ configuration {
     show-icons:                 false;
 }
 
-@theme '~/.cache/wal/colors.rasi'
+@theme '/home/av/.config/colour/color.css'
 
 /*****----- Global Properties -----*****/
 * {
@@ -48,7 +48,7 @@ imagebox {
     spacing:                     0px;
     padding:                     30px;
     background-color:            transparent;
-    background-image: url("/home/himanshu/Wallpapers/681b7b1d0e2b66173f1a63f5dd1f6a6c.jpg", width);
+    background-image: url("/home/av/Downloads/wallpaper/2025", width);
     children:                    [ "inputbar", "dummy", "message" ];
 }
 
@@ -59,7 +59,7 @@ userimage {
     border-radius:               10px;
     border-color:                @background-alt;
     background-color:            transparent;
-    background-image: url("/home/himanshu/Wallpapers/681b7b1d0e2b66173f1a63f5dd1f6a6c.jpg", width);
+    background-image: url("/home/av/Downloads/wallpaper/2025", width);
 }
 
 /*****----- Inputbar -----*****/
