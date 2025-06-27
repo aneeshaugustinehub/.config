@@ -1,6 +1,6 @@
 /*****----- Configuration -----*****/
 configuration {
-    show-icons: false;
+    show-icons: true;
 }
 
 /*****----- Import Theme -----*****/
@@ -16,7 +16,7 @@ configuration {
     urgent: @main-br;
 }
 
-/* USE_BUTTONS=YES */
+/* USE_BUTTONS=NO */
 
 /*****----- Main Window -----*****/
 window {

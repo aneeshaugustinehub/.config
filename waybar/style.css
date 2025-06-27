@@ -13,11 +13,6 @@
 @import url("/home/av/.config/colour/color.css");
 
 
-democl{
-        background-color: rgb(204, 167, 201);
-
-}
-
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
@@ -50,25 +45,26 @@ democl{
 
 /* Reset all styles */
 tooltip {
-    background-color: @base ;
-    border: 2px solid @bordercolour;
+    background-color: @background ;
+    color: @textcolour;
     border-radius: 2px;
 }
 
 * {
 
-    border: none;
-    border-radius:0;
+    border: @bordercolour;
+    border-radius:1;
     min-height: 0;
     margin: 0;
 
 }
 
 #waybar {
-    background: rgba(45, 41, 46, 0.899);
+    background: @background-alt;
     color: @textcolour;
-    font-family: "JetBrainsMono Nerd Font", "sans-serif"; 
-    font-size: 13px;
+/*    font-family: "JetBrainsMono Nerd Font", "sans-serif"; 
+    font-size: 13px; 
+    */
 
 }
 
@@ -107,7 +103,7 @@ tooltip {
 }
 
 #battery.critical {
-    color: red;
+    color: @critical;
 }
 
 #battery.warning.discharging {
@@ -138,7 +134,7 @@ tooltip {
 }
 
 #cpu.critical {
-    color: red;
+    color: @critical;
 }
 
 #memory {
@@ -152,7 +148,7 @@ tooltip {
 }
 
 #memory.critical {
-    color: red;
+    color: @critical;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
@@ -189,7 +185,7 @@ tooltip {
 }
 
 #temperature.critical {
-    color: red;
+    color: @critical;
 }
 
 #tray {
@@ -200,7 +196,6 @@ tooltip {
 
 #window {
     font-weight: bold;
-    font-size: medium;
     color: @textcolour;
     background-color: @background;
     padding-left: 8px;
@@ -211,7 +206,6 @@ tooltip {
 #workspaces button {
     border-top: 2px solid transparent;
     /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
     padding-left: 5px;
     padding-right: 5px;
     color: @textcolour;
@@ -219,17 +213,17 @@ tooltip {
 }
 
 #workspaces button.focused {
-    border-color: #994c8f;
+    border-color: #fffb00;
     color: #ff0000;
     background-color: @background;
 }
 
 #workspaces button.urgent {
-    border-color: #ff5353;
-    color: #ff4756;
+    border-color: @urgent;
+    color: @urgent;
 }
  #workspaces button.active {
-    border-color: #76357b;
+    border-color: @active;
     color: @textcolour;
     background-color: @background;
 }

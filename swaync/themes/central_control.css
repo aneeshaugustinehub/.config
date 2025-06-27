@@ -10,10 +10,6 @@
 
 }
 
-shshs{
-  background-color: rgb(255, 0, 0);
-
-}
 
 /* Avoid 'annoying' backgroud */
 .blank-window {  
@@ -24,8 +20,9 @@ shshs{
 
 .control-center {
   background: alpha(@background-alt, .85);
+  color:            @textcolour;
   border-radius: 15px;
-  border: 1px solid @selected;
+  border: 1px solid @bordercolor;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
   margin: 18px;
   padding: 12px;
@@ -35,7 +32,7 @@ shshs{
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background-color: @background;
-  border-radius: 16px;
+  border-radius: 16px ;
   margin: 4px 0px;
   padding: 4px;
 }
@@ -93,7 +90,7 @@ trough {
 }
 
 progressbar {
-  background-color: rgb(76, 0, 255);
+  background-color: @button;
 }
 
 /* Notifications expanded-group */
