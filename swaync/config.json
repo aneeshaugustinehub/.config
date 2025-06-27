@@ -93,7 +93,7 @@
         },
         {
           "label": "󰧕",
-          "command": "kitty -e yay -Syu"
+          "command": "kitty -e sudo pacman -Syu"
         },
         {
           "label": "󰏘",
@@ -101,7 +101,7 @@
         },
         {
           "label": "󰸽",
-          "command": "kitty fastfetch"
+          "command": "kitty fastfetch &,"
         },
         {
 

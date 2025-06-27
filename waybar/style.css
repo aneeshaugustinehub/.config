@@ -10,10 +10,7 @@
  * colours
  * -------------------------------------------------------------------------- */
 
-@define-color	base  rgb(30, 30, 46);
-@define-color	bgcolour rgba(58, 24, 53, 0.619);
-@define-color	textcolour rgb(204, 167, 201);
-@define-color	bordercolour rgb(124, 111, 100);
+@import url("/home/av/.config/colour/color.css");
 
 
 democl{
@@ -27,22 +24,21 @@ democl{
 
 @keyframes blink-warning {
     70% {
-        color: rgb(255, 255, 255);
+        color: @textcolour;
     }
-
     to {
-        color: white;
+        color: @textcolour;
         background-color: rgb(255, 165, 0);
     }
 }
 
 @keyframes blink-critical {
     70% {
-      color: white;
+      color: @textcolour;
     }
 
     to {
-        color: white;
+        color: @textcolour;
         background-color: red;
     }
 }
@@ -127,7 +123,7 @@ tooltip {
 #clock {
     font-weight: bold;
     color: @textcolour;
-    background-color: @bgcolour;
+    background-color: @background;
     padding-left: 4px;
     padding-right: 4px;
 
@@ -206,7 +202,7 @@ tooltip {
     font-weight: bold;
     font-size: medium;
     color: @textcolour;
-    background-color: @bgcolour;
+    background-color: @background;
     padding-left: 8px;
     padding-right: 8px;
 
@@ -225,7 +221,7 @@ tooltip {
 #workspaces button.focused {
     border-color: #994c8f;
     color: #ff0000;
-    background-color: @bgcolour;
+    background-color: @background;
 }
 
 #workspaces button.urgent {
@@ -235,5 +231,5 @@ tooltip {
  #workspaces button.active {
     border-color: #76357b;
     color: @textcolour;
-    background-color: @bgcolour;
+    background-color: @background;
 }
