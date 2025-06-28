@@ -43,6 +43,8 @@
   "widgets": [
     "label",
     "buttons-grid",
+    "volume",
+    "backlight",
     "mpris",
     "title",
     "dnd",
@@ -65,6 +67,11 @@
       "image-size": 96,
       "image-radius": 12
     },
+      "backlight": {
+      "label": "",
+      "device": "intel_backlight",
+      "min": 10
+    },
     "volume": {
       "label": "󰕾",
         "show-per-app": true
@@ -73,7 +80,7 @@
       "actions": [
         {
           "label": " ",
-          "command": "amixer set Master toggle"
+          "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
         },
         {
           "label": "",
