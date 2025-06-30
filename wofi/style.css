@@ -1,0 +1,72 @@
+@import '/home/av/.config/colour/color.css';
+
+*{
+font-family: "FiraCode Nerd Font";
+min-height: 0;
+font-size: 18px;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding: 0px;
+margin-top: 1px;
+margin-bottom: 1px;
+}
+
+
+#window {
+	background-color: alpha(@background-alt, .85);
+}
+
+#outer-box {
+	padding: 10px;
+}
+
+#input {
+	background-color: @background;
+	color: @background-alt;
+	border-radius: 20px;
+	padding: 12px;
+}
+
+#scroll {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#img {
+	padding-right: 5px;
+	padding-left: 20px;
+	font-size: 30px;
+}
+
+#text {
+	color: @textcolour;
+	padding-left: 10px;
+}
+
+#text:selected {
+	color: @background-alt;
+}
+
+#entry {
+	padding: 2px;
+	margin-top: 2px;
+}
+
+#entry:selected {
+	background-color: @selected;
+}
+
+#unselected {
+}
+
+#selected {
+}
+
+#input, #entry:selected {
+	border-radius: 20px;
+	border: 2px;
+}
+
+#input > image {
+       -gtk-icon-transform:scaleX(0);
+}
+
