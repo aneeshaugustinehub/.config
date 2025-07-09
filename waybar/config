@@ -20,6 +20,7 @@
     "modules-left": [
         "custom/wofi",
         "hyprland/workspaces",
+        "custom/new-workspace",
         "group/hardware"
     ],
     "modules-center": [
@@ -34,11 +35,7 @@
         "clock",
         "battery",
         "custom/swaync"
-//        "custom/power",
-
-
-        
-
+//      "custom/power",
     ],
 
 
@@ -167,6 +164,7 @@
             "urgent": "",
             //"focused": " ",
             //"default": " ",
+            //"default": "󰲌 ",
         }
     },
 
@@ -261,4 +259,13 @@
             "bluetooth",
         ]
     },
+
+
+    "custom/new-workspace": {
+        "format": "  ",
+        "tooltip": "false", // Optional: set to true if you want a tooltip on hover
+        "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
+        "return-type": "json" // Ensure the module expects JSON output
+    },
+
 }
