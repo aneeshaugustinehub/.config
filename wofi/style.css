@@ -20,7 +20,7 @@ margin-bottom: 1px;
 }
 
 #input {
-	background-color: @background;
+	background-color: @color1;
 	color: @background-alt;
 	border-radius: 20px;
 	padding: 12px;
@@ -43,7 +43,7 @@ margin-bottom: 1px;
 }
 
 #text:selected {
-	color: @background-alt;
+	color: @color1;
 }
 
 #entry {
@@ -52,6 +52,7 @@ margin-bottom: 1px;
 }
 
 #entry:selected {
+	color: @textcolour;
 	background-color: @selected;
 }
 

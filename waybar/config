@@ -172,8 +172,8 @@
 
     "pulseaudio": {
         "scroll-step": 3,
-        "format": "{icon}    {volume}%",
-        "format-bluetooth": "{icon}    {volume}%",
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
         "format-muted": "",
         "format-icons": {
             "headphones": "",
@@ -222,7 +222,9 @@
         "on-scroll-up": "brightnessctl set +5%",
         "format": "{icon} {percent}% ",
         "format-icons": ["   ", "   "],
-        "on-click": "wdisplays"
+        "on-click": "wdisplays",
+        "tooltip": false
+
     },
 
     "tray": {
