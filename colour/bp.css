@@ -1,0 +1,25 @@
+
+@define-color textcolour            rgb(240, 240, 240);
+@define-color background-alt        rgba(60, 60, 60, 0.6);
+@define-color background            rgb(40, 40, 40);
+@define-color bordercolor           rgb(80, 80, 80);
+@define-color selected              rgb(255, 215, 0);
+@define-color hover                 rgb(255, 223, 70);
+@define-color base                  rgb(50, 50, 50);
+@define-color button                rgb(255, 215, 0);
+@define-color active                rgb(200, 170, 0);
+
+@define-color color1                rgb(255, 255, 255);
+@define-color color2                rgb(200, 200, 200);
+@define-color color3                rgb(150, 150, 150);
+@define-color color4                rgb(100, 100, 100);
+
+@define-color urgent                rgb(230, 126, 34);
+@define-color warning               rgb(241, 196, 15);
+@define-color critical              rgb(192, 57, 43);
+
+
+
+body {
+  background-color: rgba(255, 173, 230, 0.369);
+}
