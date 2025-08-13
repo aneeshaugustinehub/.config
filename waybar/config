@@ -129,7 +129,7 @@
 
     "memory": {
         "interval": 5,
-        "format": "    {}%", // Icon: memory
+        "format": "󰍛 {}%", // Icon: memory
         "states": {
             "warning": 70,
             "critical": 90,
@@ -167,16 +167,22 @@
             //"default": "󰲌 ",
         }
     },
+    "custom/new-workspace": {
+        "format": " ",
+        "tooltip": "false", // Optional: set to true if you want a tooltip on hover
+        "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
+        "return-type": "json" // Ensure the module expects JSON output
+    },
 
     "pulseaudio": {
         "scroll-step": 3,
-        "format": "{icon}  {volume}%",
+        "format": "{icon}   {volume}%",
         "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "",
+        "format-muted": "󰝟",
         "format-icons": {
             "headphones": "",
-            "handsfree": "",
-            "headset": "",
+            "handsfree": "󰂰",
+            "headset": "󰂰",
             "phone": "",
             "portable": "",
             "car": "",
@@ -258,14 +264,6 @@
             "network",
             "bluetooth",
         ]
-    },
-
-
-    "custom/new-workspace": {
-        "format": "  ",
-        "tooltip": "false", // Optional: set to true if you want a tooltip on hover
-        "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
-        "return-type": "json" // Ensure the module expects JSON output
     },
 
 }

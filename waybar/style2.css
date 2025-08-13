@@ -1,0 +1,227 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * colours
+ * -------------------------------------------------------------------------- */
+
+@import url("/home/av/.config/colour/color.css");
+
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+    70% {
+        color: @textcolour;
+    }
+    to {
+        color: @textcolour;
+        background-color: rgb(255, 165, 0);
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: @textcolour;
+    }
+
+    to {
+        color: @textcolour;
+        background-color: red;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+tooltip {
+    background-color: @background ;
+    color: @textcolour;
+    border-radius: 2px;
+    border: @bordercolour;
+}
+
+* {
+
+    border: @bordercolour;
+    border-radius:1;
+    min-height: 0;
+    margin: 0;
+}
+
+#waybar {
+    background: @background-alt;
+    color: @textcolour;
+    font-family: "JetBrainsMono Nerd Font", "sans-serif"; 
+    font-size: 14px; 
+}
+
+/* Each module */
+#battery,
+#clock,
+#cpu,
+#custom-keyboard-layout,
+#memory,
+#mode,
+#network,
+#pulseaudio,
+#temperature,
+#tray {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    padding-left: 4px;
+    padding-right: 4px;
+
+}
+
+#battery.warning {
+    color: orange;
+
+}
+
+#battery.critical {
+    color: @critical;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    font-weight: bold;
+    color: @textcolour;
+    background-color: @background;
+    padding-left: 4px;
+    padding-right: 4px;
+
+}
+
+#cpu {
+  /* No styles */
+}
+
+#cpu.warning {
+    color: orange;
+}
+
+#cpu.critical {
+    color: @critical;
+}
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: orange;
+}
+
+#memory.critical {
+    color: @critical;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#mode {
+    background: #0091ff;
+    border-top: 2px solid white;
+    /* To compensate for the top border and still have vertical centering */
+    padding-bottom: 2px;
+}
+
+#network {
+    /* No styles */
+}
+
+#network.disconnected {
+    color: orange;
+}
+
+#pulseaudio {
+    /* No styles */
+}
+
+#pulseaudio.muted {
+    /* No styles */
+    color: @textcolour;
+
+}
+
+
+#temperature {
+    
+    /* No styles */
+}
+
+#temperature.critical {
+    color: @critical;
+}
+
+#tray {
+    padding-left: 5px;
+    padding-right: 5px;
+    /* No styles */
+}
+
+#window {
+    font-weight: bold;
+    color: @textcolour;
+    background-color: @background;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-left: 5px;
+    padding-right: 5px;
+    color: @textcolour;
+    border-radius: 3px;
+}
+
+#workspaces button.focused {
+    border-color: #fffb00;
+    color: #ff0000;
+    background-color: @background;
+}
+
+#workspaces button.urgent {
+    border-color: @urgent;
+    color: @urgent;
+}
+ #workspaces button.active {
+    border-color: @active;
+    color: @textcolour;
+    background-color: @background;
+}

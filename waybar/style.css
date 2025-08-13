@@ -1,227 +1,123 @@
-/* =============================================================================
- *
- * Waybar configuration
- *
- * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
- *
- * =========================================================================== */
-
-/* -----------------------------------------------------------------------------
- * colours
- * -------------------------------------------------------------------------- */
-
 @import url("/home/av/.config/colour/color.css");
 
 
-/* -----------------------------------------------------------------------------
- * Keyframes
- * -------------------------------------------------------------------------- */
-
-@keyframes blink-warning {
-    70% {
-        color: @textcolour;
-    }
-    to {
-        color: @textcolour;
-        background-color: rgb(255, 165, 0);
-    }
-}
-
-@keyframes blink-critical {
-    70% {
-      color: @textcolour;
-    }
-
-    to {
-        color: @textcolour;
-        background-color: red;
-    }
-}
-
-
-/* -----------------------------------------------------------------------------
- * Base styles
- * -------------------------------------------------------------------------- */
-
-/* Reset all styles */
-tooltip {
-    background-color: @background ;
-    color: @textcolour;
-    border-radius: 2px;
-    border: @bordercolour;
-}
-
 * {
-
-    border: @bordercolour;
-    border-radius:1;
-    min-height: 0;
-    margin: 0;
+  font-family: "DM Sans", "JetBrainsMono Nerd Font Propo", "Arial", sans-serif;
+  font-size: 14px; /* Reduced to fit 2px height */
+  border-radius: 2px; /* Smaller radius for tiny bar */
+  font-weight: bold;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
-#waybar {
-    background: @background-alt;
-    color: @textcolour;
-    font-family: "JetBrainsMono Nerd Font", "sans-serif"; 
-    font-size: 14px; 
-}
-
-/* Each module */
-#battery,
-#clock,
-#cpu,
-#custom-keyboard-layout,
-#memory,
-#mode,
-#network,
-#pulseaudio,
-#temperature,
-#tray {
-    padding-left: 3px;
-    padding-right: 3px;
-}
-
-
-/* -----------------------------------------------------------------------------
- * Module styles
- * -------------------------------------------------------------------------- */
-
-#battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    padding-left: 4px;
-    padding-right: 4px;
+window#waybar {
+  background-color: transparent;
+  color: @foreground;
 
 }
 
-#battery.warning {
-    color: orange;
-
-}
-
-#battery.critical {
-    color: @critical;
-}
-
-#battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
-}
-
-#battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
-#clock {
-    font-weight: bold;
-    color: @textcolour;
-    background-color: @background;
-    padding-left: 4px;
-    padding-right: 4px;
-
-}
-
-#cpu {
-  /* No styles */
-}
-
-#cpu.warning {
-    color: orange;
-}
-
-#cpu.critical {
-    color: @critical;
-}
-
-#memory {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#memory.warning {
-    color: orange;
-}
-
-#memory.critical {
-    color: @critical;
-    animation-name: blink-critical;
-    animation-duration: 2s;
-}
-
-#mode {
-    background: #0091ff;
-    border-top: 2px solid white;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-}
-
-#network {
-    /* No styles */
-}
-
-#network.disconnected {
-    color: orange;
-}
-
-#pulseaudio {
-    /* No styles */
-}
-
-#pulseaudio.muted {
-    /* No styles */
-    color: @textcolour;
-
-}
-
-
-#temperature {
-    
-    /* No styles */
-}
-
-#temperature.critical {
-    color: @critical;
-}
-
-#tray {
-    padding-left: 5px;
-    padding-right: 5px;
-    /* No styles */
-}
-
-#window {
-    font-weight: bold;
-    color: @textcolour;
-    background-color: @background;
-    padding-left: 8px;
-    padding-right: 8px;
-
+#custom, #workspaces {
+  background-color: @background;
+  padding: 0; /* No padding to fit 2px */
+  border-radius: 2px;
 }
 
 #workspaces button {
-    border-top: 2px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding-left: 5px;
-    padding-right: 5px;
-    color: @textcolour;
-    border-radius: 3px;
+  background-color: @background;
+  color: @foreground;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0 4px; /* Minimal padding */
+  transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.15s ease, padding-right 0.15s ease;
 }
 
-#workspaces button.focused {
-    border-color: #fffb00;
-    color: #ff0000;
-    background-color: @background;
+#workspaces button.active {
+  background-color: @color1;
+  color: @active;
+  padding: 0 8px;
+}
+
+#workspaces button.active:hover {
+  color: @background;
+  background: @hover;
+}
+
+#workspaces button.empty {
+  color: @foreground;
+}
+
+#workspaces button:hover {
+  background: @color4;
 }
 
 #workspaces button.urgent {
-    border-color: @urgent;
-    color: @urgent;
+  background-color: @color5; /* Distinct color for urgent */
+  color: @background;
 }
- #workspaces button.active {
-    border-color: @active;
-    color: @textcolour;
-    background-color: @background;
+
+#battery,
+#pulseaudio,
+#backlight,
+#custom-pacman,
+#network,
+#bluetooth,
+#clock,
+#custom-weather,
+#custom-media,
+#window,
+#cpu,
+#memory,
+#disk,
+#tray,
+#custom-launcher,
+#custom-notification,
+#power-profiles-daemon {
+  color: @foreground;
+  background-color: @background;
+  margin: 0 4px; /* Reduced margin */
+  padding: 0; /* No padding to fit */
+}
+
+#custom-volight,
+#custom-wifibt {
+  font-size: 6px; /* Match global font size */
+  color: @foreground;
+  background-color: @background;
+  padding: 0;
+  margin: 0;
+}
+
+#custom-volight {
+  padding-left: 4px; /* Minimal padding */
+  padding-right: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#custom-wifibt {
+  padding-right: 4px; /* Minimal padding */
+  padding-left: 2px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#pulseaudio,
+#backlight,
+#network,
+#bluetooth {
+  margin: 0 4px; /* Fixed and reduced */
+}
+
+#window.hidden {
+  opacity: 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
 }
