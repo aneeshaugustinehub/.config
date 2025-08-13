@@ -3,22 +3,20 @@
 
 * {
   font-family: "DM Sans", "JetBrainsMono Nerd Font Propo", "Arial", sans-serif;
-  font-size: 14px; /* Reduced to fit 2px height */
-  border-radius: 2px; /* Smaller radius for tiny bar */
+  font-size: 14px; 
+  border-radius: 6px; 
   font-weight: bold;
-  padding-left: 3px;
-  padding-right: 3px;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: @background-alt;
   color: @foreground;
 
 }
 
 #custom, #workspaces {
   background-color: @background;
-  padding: 0; /* No padding to fit 2px */
+  padding: 0; 
   border-radius: 2px;
 }
 
@@ -28,14 +26,14 @@ window#waybar {
   border: none;
   box-shadow: none;
   text-shadow: none;
-  padding: 0 4px; /* Minimal padding */
+  padding: 0 3px; 
   transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.15s ease, padding-right 0.15s ease;
 }
 
 #workspaces button.active {
   background-color: @color1;
   color: @active;
-  padding: 0 8px;
+  padding: 0 7px;
 }
 
 #workspaces button.active:hover {
@@ -52,12 +50,17 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  background-color: @color5; /* Distinct color for urgent */
+  background-color: @color5; 
   color: @background;
 }
 
 #battery,
-#pulseaudio,
+#pulseaudio {
+  color: @foreground;
+  background-color: @background;
+  margin: 0 4px;
+  padding: 0;
+}
 #backlight,
 #custom-pacman,
 #network,
@@ -75,13 +78,13 @@ window#waybar {
 #power-profiles-daemon {
   color: @foreground;
   background-color: @background;
-  margin: 0 4px; /* Reduced margin */
-  padding: 0; /* No padding to fit */
+  margin: 0 4px;
+  padding: 0;
 }
 
 #custom-volight,
 #custom-wifibt {
-  font-size: 6px; /* Match global font size */
+  font-size: 6px;
   color: @foreground;
   background-color: @background;
   padding: 0;
@@ -89,14 +92,14 @@ window#waybar {
 }
 
 #custom-volight {
-  padding-left: 4px; /* Minimal padding */
+  padding-left: 4px;
   padding-right: 2px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 #custom-wifibt {
-  padding-right: 4px; /* Minimal padding */
+  padding-right: 4px;
   padding-left: 2px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -106,7 +109,7 @@ window#waybar {
 #backlight,
 #network,
 #bluetooth {
-  margin: 0 4px; /* Fixed and reduced */
+  margin: 0 4px;
 }
 
 #window.hidden {

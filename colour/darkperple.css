@@ -1,6 +1,6 @@
 
 @define-color textcolour            rgb(240, 240, 240);
-@define-color background-alt        rgba(60, 60, 60, 0.7);
+@define-color background-alt        rgba(60, 60, 60, 0.6);
 @define-color background            rgba(53, 9, 75, 0.6);
 @define-color bordercolor           rgb(178, 102, 255);
 @define-color selected              rgb(153, 51, 204);
