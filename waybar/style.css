@@ -1,32 +1,54 @@
 @import url("/home/av/.config/colour/color.css");
 
-
 * {
   font-family: "DM Sans", "JetBrainsMono Nerd Font Propo", "Arial", sans-serif;
-  font-size: 14px; 
-  border-radius: 6px; 
+  font-size: 14px;
+  border-radius: 6px;
   font-weight: bold;
 }
 
 window#waybar {
   background-color: @background-alt;
   color: @foreground;
-
 }
 
-#custom, #workspaces {
+/* --- General Module Styling --- */
+#battery,
+#pulseaudio,
+#backlight,
+#custom-pacman,
+#network,
+#bluetooth,
+#clock,
+#custom-weather,
+#custom-media,
+#window,
+#cpu,
+#memory,
+#disk,
+#tray,
+#custom-launcher,
+#custom-notification,
+#power-profiles-daemon,
+#custom-volight,
+#custom-wifibt,
+#workspaces,
+#custom {
+  color: @foreground;
   background-color: @background;
-  padding: 0; 
-  border-radius: 2px;
+  padding: 0 5px; /* Set your desired padding here */
+  margin: 0 3px; /* Set your desired margin here */
+  border-radius: 6px; /* Ensure all modules have the same border-radius */
 }
 
+/* --- Workspaces Styling --- */
 #workspaces button {
   background-color: @background;
   color: @foreground;
   border: none;
   box-shadow: none;
   text-shadow: none;
-  padding: 0 3px; 
+  padding: 0 4px;
   transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.15s ease, padding-right 0.15s ease;
 }
 
@@ -42,7 +64,8 @@ window#waybar {
 }
 
 #workspaces button.empty {
-  color: @foreground;
+  color: @active;
+  background: @color1;
 }
 
 #workspaces button:hover {
@@ -50,43 +73,14 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  background-color: @color5; 
+  background-color: @urgent;
   color: @background;
 }
 
-#battery,
-#pulseaudio {
-  color: @foreground;
-  background-color: @background;
-  margin: 0 4px;
-  padding: 0;
-}
-#backlight,
-#custom-pacman,
-#network,
-#bluetooth,
-#clock,
-#custom-weather,
-#custom-media,
-#window,
-#cpu,
-#memory,
-#disk,
-#tray,
-#custom-launcher,
-#custom-notification,
-#power-profiles-daemon {
-  color: @foreground;
-  background-color: @background;
-  margin: 0 4px;
-  padding: 0;
-}
-
+/* --- Specific Overrides --- */
 #custom-volight,
 #custom-wifibt {
   font-size: 6px;
-  color: @foreground;
-  background-color: @background;
   padding: 0;
   margin: 0;
 }
@@ -103,13 +97,6 @@ window#waybar {
   padding-left: 2px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-
-#pulseaudio,
-#backlight,
-#network,
-#bluetooth {
-  margin: 0 4px;
 }
 
 #window.hidden {
