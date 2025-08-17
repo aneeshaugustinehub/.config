@@ -104,6 +104,7 @@
 
     "clock": {
         "format": "   {:%I:%M %p}",
+        "format-alt": " {:%I:%M %p   %d-%m-%y}",
         "tooltip-format": "<big>{:%A, %d,}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
@@ -115,12 +116,6 @@
             }
         }
     },
-    "custom/date": {
-     "format": "  {%d-%m-%y}",
-//        "tooltip-format": "{:%e %B %Y}"
-        "tooltip-format": "<span font='IBM Plex Mono Bold 13'><big>{:%d %B}</big>\n<tt><small>{calendar}</small></tt></span>",
-    },
-
 
     "cpu": {
         "interval": 5,
@@ -296,8 +291,13 @@
         "exec": "~/.config/waybar/scripts/cava.sh",
         "format": "{}",
         "tail": true,
+        "format-alt": "{icon}",
+        "format-icons": [
+          "",
+      ],
         "on-click": "pkill cava",
-        "on-click-right": "pkill cava",
+        "on-click-right": "/home/av/.config/swaync/refresh.sh",
+
         "tooltip": false
     }
 }
