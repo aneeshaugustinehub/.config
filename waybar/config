@@ -22,7 +22,8 @@
         "hyprland/workspaces",
         "custom/new-workspace",
         "group/hardware",
-        
+        "custom/cava-toggle", // Custom module to toggle Cava
+        "custom/cava" // Custom module for Cava
     ],
     "modules-center": [
         "hyprland/window"
@@ -280,12 +281,23 @@
         ]
     },
 
-    "modules-center": ["custom/cava"],
-"custom/cava": {
-    "exec": "~/.config/waybar/cava.sh",
-    "format": "{}",
-    "tail": true
-}
-
-
+    "custom/cava-toggle": {
+        "format": "{icon}",
+        "format-icons": {
+            "running": "▮",
+            "stopped": "▷"
+        },
+        "exec": "~/.config/waybar/scripts/toggle-cava.sh",
+        "return-type": "json",
+        "on-click": "~/.config/waybar/scripts/toggle-cava.sh",
+        "tooltip": true
+    },
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "format": "{}",
+        "tail": true,
+        "on-click": "pkill cava",
+        "on-click-right": "pkill cava",
+        "tooltip": false
+    }
 }
