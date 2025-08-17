@@ -22,8 +22,10 @@
         "hyprland/workspaces",
         "custom/new-workspace",
         "group/hardware",
+        "cava",
+        "custom/cava",
+        
     ],
-
     "modules-center": [
         "hyprland/window"
     ],

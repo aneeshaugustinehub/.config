@@ -111,3 +111,16 @@ window#waybar {
 window#waybar.empty #window {
   background-color: transparent;
 }
+#cava {
+    padding: 0 4px; /* Adjust padding as needed */
+    color: @foreground; /* Match your color scheme */
+    background-color: @background;
+    font-size: 16px; /* Adjust font size to change the bar height */
+}
+#custom-cava {
+    padding: 0 4px; /* Adjust padding as needed */
+    color: @foreground; /* Match your color scheme */
+    background-color: @background;
+    font-size: 16px; /* Adjust font size to change the bar height */
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+}
