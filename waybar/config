@@ -22,8 +22,6 @@
         "hyprland/workspaces",
         "custom/new-workspace",
         "group/hardware",
-        "cava",
-        "custom/cava",
         
     ],
     "modules-center": [
@@ -281,6 +279,13 @@
             "bluetooth",
         ]
     },
+
+    "modules-center": ["custom/cava"],
+"custom/cava": {
+    "exec": "~/.config/waybar/cava.sh",
+    "format": "{}",
+    "tail": true
+}
 
 
 }
