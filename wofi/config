@@ -37,4 +37,4 @@ filter_rate=100
 
 ## Keys
 key_expand=Tab 
-key_exit=Escape
+key_exit=Super_L

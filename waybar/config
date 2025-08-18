@@ -99,12 +99,11 @@
         ],
         "tooltip": true,
         "on-click": "auto-cpufreq"
-
     },
 
     "clock": {
         "format": "   {:%I:%M %p}",
-        "format-alt": " {:%I:%M %p   %d-%m-%y}",
+        "format-alt": "   {:%I:%M %p     %d-%m-%y}",
         "tooltip-format": "<big>{:%A, %d,}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
@@ -152,11 +151,12 @@
         "format-wifi": " ",
         "format-ethernet":" ",
         "format-disconnected": " ",
+        "format-alt": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
         "tooltip-format-disconnected": "Error",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits} ",
         "tooltip-format-ethernet": "{ifname} 🖧 ",
-        "on-click-right": "kitty nmtui",
-        "on-click": "nm-connection-editor"
+//        "on-click-right": "kitty nmtui",
+        "on-click-right": "nm-connection-editor"
     },
 
 
@@ -176,6 +176,7 @@
             //"default": "󰲌 ",
         }
     },
+
     "custom/new-workspace": {
         "format": "  ",
         "tooltip": "false", // Optional: set to true if you want a tooltip on hover
@@ -217,11 +218,12 @@
     },
 
     "bluetooth": {
-        "format-on": "󰂯 on",
+        "format-on": " on",
         "format-off": "󰂲 off",
         "format-disabled": "󰂲 dis",
-        "format-connected-battery": "{device_battery_percentage}% 󰂯",
-        "format-alt": "{device_alias}󰂯 ",
+        "format-connected": "󰂱 ",
+        "format-connected-battery": "󰥉 {device_battery_percentage}%",
+        "format-alt": " 󰂱 {device_alias}",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
