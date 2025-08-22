@@ -56,8 +56,11 @@
         },
         // Connected to AC
         "format": "󰂄 {capacity}%", // Icon: bolt
+        "format-alt": "󰂄 {capacity}%  {time}",
+
         // Not connected to AC
         "format-discharging": "{icon} {capacity}%",
+        "format-discharging-al": "{icon} {capacity}% {time}",
         "format-icons": [
             "󰁻",
             "󰁼",
@@ -67,12 +70,12 @@
             "󰁹"
         ],
         "tooltip": true,
-        "on-click": "auto-cpufreq"
+        "on-click": ""
     },
 
     "clock": {
         "format": "   {:%I:%M %p}",
-        "format-alt": "   {:%I:%M %p     %d-%m-%y}",
+        "format-alt":"{:%A  %I:%M %p  %d-%m-%y}",
         "tooltip-format": "<big>{:%A, %d,}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
@@ -130,8 +133,9 @@
 
 
     "hyprland/window": {
-        "format": "{}",
-        "max-length": 50
+        "format": "{class}",
+        "format-alt": "{title}",
+        "max-length": 60
     },
 
     "hyprland/workspaces": {
