@@ -5,8 +5,8 @@
   font-size: 14px;
   border-radius: 7px;
   font-weight: bold;
-  padding: 0 4px;
-  margin: 0  2px;
+  padding: 0 0px;
+  margin: 0  0px;
 }
 
 window#waybar {
@@ -15,61 +15,65 @@ window#waybar {
 }
 
 /* --- General Module Styling --- */
+#custom-new-workspace{
 
-#hyprland-workspaces
-#custom-new-workspace
-#group-hardware
-#group-media-controls
-#hyprland-window
-#custom-keyboard-layout
-#group-network
-#backlight
-#pulseaudio
-#tray
-#clock
-#battery
-#group-power
-
-#battery,
-#pulseaudio,
-#backlight,
-#custom-pacman,
-#network,
+}
+#group-hardware{
+  color: @foreground;
+  background-color: @background;
+  padding: 0 2px;
+  margin: 0  2px;
+}
+#custom-media-controls,
+#hyprland-window,
+#group-network{
+  padding: 0 10px;
+  margin: 0  10px;
+}
+#custom-wofi,
+#custom-power,
+#custom-swaync{
+  padding: 0 3px;
+  margin: 0  4px;
+}
+#tray,
+#custom-airplane,
 #bluetooth,
+#pulseaudio,
+#battery,
+#backlight,
+#network,
 #clock,
-#custom-weather,
-#custom-media,
 #window,
 #cpu,
 #memory,
-#disk,
-#tray,
-#custom-launcher,
-#custom-notification,
-#power-profiles-daemon,
-#custom-volight,
-#custom-wifibt,
+#temperature,
 #workspaces,
 #custom {
   color: @foreground;
   background-color: @background;
+  padding: 0 5px;
+  margin: 0  2px;
 }
 
 /* --- Workspaces Styling --- */
+
 #workspaces button {
   background-color: @background;
   color: @foreground;
   border: none;
   box-shadow: none;
   text-shadow: none;
-  padding: 0 4px;
   transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.15s ease, padding-right 0.15s ease;
+  padding: 0 2px;
+  margin: 0  2px;
 }
 
 #workspaces button.active {
-  background-color: @color1;
-  color: @active;
-  padding: 0 7px;
+  background-color: @active;
+  color: @background;
+  padding: 0 5px;
+  margin: 0  5px;
 }
 
 #workspaces button.active:hover {
@@ -78,12 +82,13 @@ window#waybar {
 }
 
 #workspaces button.empty {
-  color: @active;
+  color: @background;
   background: @color1;
 }
 
 #workspaces button:hover {
-  background: @color4;
+  background: @hover;
+  color: @background;
 }
 
 #workspaces button.urgent {
@@ -96,8 +101,6 @@ window#waybar {
   opacity: 0;
   min-width: 0;
   min-height: 0;
-  padding: 0;
-  margin: 0;
   border: none;
 }
 
@@ -106,8 +109,9 @@ window#waybar.empty #window {
 }
 
 #custom-cava {
-    color: @foreground-alt; /* Match your color scheme */
+    color: @active; /* Match your color scheme */
     background-color: @background;
     font-size: 10px; /* Adjust font size to change the bar height */
+    padding: 0 5px;
     font-family: "JetBrainsMono Nerd Font Propo", monospace;
 }

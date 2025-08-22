@@ -144,7 +144,7 @@
     },
 
     "custom/new-workspace": {
-        "format": "",
+        "format": " ",
         "tooltip": "false", 
         "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
         "return-type": "json" // Ensure the module expects JSON output
@@ -283,7 +283,7 @@
         "on-click": "swaync-client -t -sw",
         "tooltip": false,
     },
-        "custom/wofi":{
+    "custom/wofi":{
         "format": "",
         "on-click": "wofi",
         "tooltip": false,
