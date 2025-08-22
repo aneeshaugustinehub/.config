@@ -1,9 +1,6 @@
 // =============================================================================
-//
 // Waybar configuration
-//
 // Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
-//
 // =============================================================================
 
 {
@@ -15,15 +12,15 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 24,
+    "height": 20,
 
     "modules-left": [
         "custom/wofi",
         "hyprland/workspaces",
         "custom/new-workspace",
         "group/hardware",
-        "custom/cava-toggle", // Custom module to toggle Cava
-        "custom/cava" // Custom module for Cava
+        "custom/cava-toggle",
+        "custom/cava"
     ],
     "modules-center": [
         "hyprland/window"
@@ -36,8 +33,7 @@
         "tray",
         "clock",
         "battery",
-        "custom/swaync"
-//      "custom/power",
+        "group/power",
     ],
 
 
@@ -52,33 +48,6 @@
 //        "format-icons": "󰾲",
 //        "on-click": "kitty -e nvtop",
 //},
-
-    "custom/swaync":{
-        "format": "  ",
-        "on-click": "swaync-client -t -sw",
-        "tooltip": false,
-    },
-
-        "custom/wofi":{
-        "format": "  ",
-        "on-click": "wofi",
-        "tooltip": false,
-    },
-     
-	"custom/power": {
-		"format": "   ",
-		"on-click": " exec, /home/av/.config/wofi/powermenu/powermenu.sh",
-        "tooltip": false,
-
-	},
-
-    "custom/network": {
-        "format": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
-        "format-ethernet": " ↓{bandwidthDownBits} ↑{bandwidthUpBits}",
-        "format-wifi": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
-    },
-
-
     "battery": {
         "interval": 10,
         "states": {
@@ -147,10 +116,10 @@
 
     "network": {
         "interval": 1,
-        "format": " ",
-        "format-wifi": " ",
-        "format-ethernet":" ",
-        "format-disconnected": " ",
+        "format": "✈️",
+        "format-wifi": "",
+        "format-ethernet":"",
+        "format-disconnected": "",
         "format-alt": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
         "tooltip-format-disconnected": "Error",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits} ",
@@ -199,10 +168,7 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
-
     },
-
-
     "temperature": {
       "critical-threshold": 80,
       "interval": 5,
@@ -242,14 +208,11 @@
         "tooltip": false
 
     },
-
     "tray": {
         "icon-size":18,
         "spacing": 9
     },
-
     "group/hardware": {
-        "format": "  ",
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 500,
@@ -262,10 +225,7 @@
             "memory",
         ]
     },
-
-
     "group/network": {
-        "format": "  ",
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 250,
@@ -274,10 +234,39 @@
         },
         "modules": [
             "network",
+            "custom/airplane",
             "bluetooth",
         ]
     },
+    "group/power": {
+        "format": "  ",
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "not-hardware",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/swaync",
+            "custom/power",
+        ]
+    },
 
+    "custom/swaync":{
+        "format": "  ",
+        "on-click": "swaync-client -t -sw",
+        "tooltip": false,
+    },
+        "custom/wofi":{
+        "format": "  ",
+        "on-click": "wofi",
+        "tooltip": false,
+    },
+	"custom/power": {
+		"format": "  ",
+		"on-click": "wlogout",
+        "tooltip": false,
+	},
     "custom/cava-toggle": {
         "format": "{icon}",
         "format-icons": {
@@ -301,5 +290,12 @@
         "on-click-right": "/home/av/.config/swaync/refresh.sh",
 
         "tooltip": false
+    },
+    "custom/airplane": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/airplane-mode.sh",
+        "return-type": "text",
+        "on-click": "~/.config/waybar/scripts/airplane-mode.sh toggle",
+        "interval": 5
     }
 }

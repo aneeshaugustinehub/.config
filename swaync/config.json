@@ -117,7 +117,7 @@
         },
         {
           "label": "",
-          "command": "wlogout"
+          "command": "/home/av/.config/wofi/powermenu.sh"
         }
       ]
     }

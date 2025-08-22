@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check airplane mode status
+STATUS=$(nmcli radio all | grep -o "disabled" || echo "enabled")
+
+if [ "$1" == "toggle" ]; then
+    if [ "$STATUS" == "enabled" ]; then
+        nmcli radio all off
+        echo "Airplane mode enabled"
+    else
+        nmcli radio all on
+        echo "Airplane mode disabled"
+    fi
+else
+    if [ "$STATUS" == "enabled" ]; then
+        echo "✈️ Off "
+    else
+        echo "✈️ On "
+    fi
+fi
