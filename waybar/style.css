@@ -1,10 +1,12 @@
-@import url("/home/av/.config/colour/color.css");
+@import url("/home/av/.config/color/color.css");
 
 * {
   font-family: "DM Sans", "JetBrainsMono Nerd Font Propo", "Arial", sans-serif;
   font-size: 14px;
-  border-radius: 6px;
+  border-radius: 7px;
   font-weight: bold;
+  padding: 0 4px;
+  margin: 0  2px;
 }
 
 window#waybar {
@@ -13,6 +15,21 @@ window#waybar {
 }
 
 /* --- General Module Styling --- */
+
+#hyprland-workspaces
+#custom-new-workspace
+#group-hardware
+#group-media-controls
+#hyprland-window
+#custom-keyboard-layout
+#group-network
+#backlight
+#pulseaudio
+#tray
+#clock
+#battery
+#group-power
+
 #battery,
 #pulseaudio,
 #backlight,
@@ -36,9 +53,6 @@ window#waybar {
 #custom {
   color: @foreground;
   background-color: @background;
-  padding: 0 5px; /* Set your desired padding here */
-  margin: 0 3px; /* Set your desired margin here */
-  border-radius: 6px; /* Ensure all modules have the same border-radius */
 }
 
 /* --- Workspaces Styling --- */
@@ -77,27 +91,6 @@ window#waybar {
   color: @background;
 }
 
-/* --- Specific Overrides --- */
-#custom-volight,
-#custom-wifibt {
-  font-size: 6px;
-  padding: 0;
-  margin: 0;
-}
-
-#custom-volight {
-  padding-left: 4px;
-  padding-right: 2px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#custom-wifibt {
-  padding-right: 4px;
-  padding-left: 2px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
 
 #window.hidden {
   opacity: 0;
@@ -113,10 +106,8 @@ window#waybar.empty #window {
 }
 
 #custom-cava {
-    padding: 0 6px; /* Adjust padding as needed */
-    margin: 0 7px;
-    color: @foreground; /* Match your color scheme */
+    color: @foreground-alt; /* Match your color scheme */
     background-color: @background;
-    font-size: 16px; /* Adjust font size to change the bar height */
+    font-size: 10px; /* Adjust font size to change the bar height */
     font-family: "JetBrainsMono Nerd Font Propo", monospace;
 }
