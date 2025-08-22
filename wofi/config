@@ -6,12 +6,12 @@ prompt=Apps
 normal_window=true
 layer=overlay
 term=foot
-columns=2
+columns=3
 
 ## Geometry
-width=60%
-height=50%
-location=bootem
+width=50%
+height=40%
+location=bottom
 orientation=vertical
 halign=fill
 line_wrap=off
@@ -20,7 +20,7 @@ dynamic_lines=true
 ## Images
 allow_markup=true
 allow_images=true
-image_size=35
+image_size=28
 
 ## Search
 exec_search=true

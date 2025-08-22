@@ -15,8 +15,8 @@ done
 config_file="/tmp/polybar_cava_config"
 echo "
 [general]
-bars = 12
-bar_width = 1
+bars = 11
+bar_width = 21
 
 
 [output]

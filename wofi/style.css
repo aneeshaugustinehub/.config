@@ -1,59 +1,58 @@
 @import '/home/av/.config/colour/color.css';
 
-*{
-font-family: "FiraCode Nerd Font";
-min-height: 0;
-font-size: 18px;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-padding: 0px;
-margin-top: 1px;
-margin-bottom: 1px;
+* {
+    font-family: "FiraCode Nerd Font";
+    min-height: 0;
+    font-size: 13px; /* Reduced from 18px for smaller text */
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    padding: 0px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
-
 #window {
-	background-color: alpha(@background-alt, .85);
+    background-color: alpha(@background-alt, .5);
 }
 
 #outer-box {
-	padding: 10px;
+    padding: 4px; /* Reduced from 10px for a more compact layout */
 }
 
 #input {
-	background-color: @color1;
-	color: @background-alt;
-	border-radius: 50px;
-	padding: 12px;
+    background-color: @color1;
+    color: @background-alt;
+    border-radius: 5px;
+    padding: 8px; /* Reduced from 12px */
 }
 
-#scroll {
-	margin-top: 10px;
-	margin-bottom: 10px;
+# scroll {
+    margin-top: 5px; /* Reduced from 10px */
+    margin-bottom: 4px; /* Reduced from 10px */
 }
 
 #img {
-	padding-right: 5px;
-	padding-left: 20px;
-	font-size: 30px;
+    padding-right: 3px;
+    padding-left: 8px; /* Reduced from 20px */
+    font-size: 30px; /* Reduced from 30px for smaller icons */
 }
 
 #text {
-	color: @textcolour;
-	padding-left: 10px;
+    color: @textcolour;
+    padding-left: 2px; /* Reduced from 10px */
 }
 
 #text:selected {
-	color: @color1;
+    color: @color1;
 }
 
 #entry {
-	padding: 2px;
-	margin-top: 2px;
+    padding: 2px;
+    margin-top: 1px; /* Reduced from 2px */
 }
 
 #entry:selected {
-	color: @textcolour;
-	background-color: @selected;
+    color: @textcolour;
+    background-color: @selected;
 }
 
 #unselected {
@@ -63,11 +62,10 @@ margin-bottom: 1px;
 }
 
 #input, #entry:selected {
-	border-radius: 20px;
-	border: 2px;
+    border-radius: 5px;
+    border: 2px;
 }
 
 #input > image {
-       -gtk-icon-transform:scaleX(0);
+    -gtk-icon-transform: scaleX(0);
 }
-

@@ -19,8 +19,8 @@
         "hyprland/workspaces",
         "custom/new-workspace",
         "group/hardware",
-        "custom/cava-toggle",
-        "custom/cava"
+        "group/media-controls",
+
     ],
     "modules-center": [
         "hyprland/window"
@@ -41,13 +41,6 @@
     // Modules
     // -------------------------------------------------------------------------
 
-//    "custom/gpu-usage": {
-//        "format": "{icon} {} ",
-//        "exec": "gpu-usage-waybar",
-//        "return-type": "json",
-//        "format-icons": "󰾲",
-//        "on-click": "kitty -e nvtop",
-//},
     "battery": {
         "interval": 10,
         "states": {
@@ -56,7 +49,7 @@
         },
         // Connected to AC
         "format": "󰂄 {capacity}%", // Icon: bolt
-        "format-alt": "󰂄 {capacity}%  {time}",
+        "format-alt": "󰂄 {capacity}% {time}",
 
         // Not connected to AC
         "format-discharging": "{icon} {capacity}%",
@@ -74,7 +67,7 @@
     },
 
     "clock": {
-        "format": "   {:%I:%M %p}",
+        "format": " {:%I:%M %p}",
         "format-alt":"{:%A  %I:%M %p  %d-%m-%y}",
         "tooltip-format": "<big>{:%A, %d,}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -151,8 +144,8 @@
     },
 
     "custom/new-workspace": {
-        "format": "  ",
-        "tooltip": "false", // Optional: set to true if you want a tooltip on hover
+        "format": "",
+        "tooltip": "false", 
         "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
         "return-type": "json" // Ensure the module expects JSON output
     },
@@ -191,9 +184,9 @@
         "format-on": " on",
         "format-off": "󰂲 off",
         "format-disabled": "󰂲 dis",
-        "format-connected": "󰂱 ",
+        "format-connected": "󰂱",
         "format-connected-battery": "󰥉 {device_battery_percentage}%",
-        "format-alt": " 󰂱 {device_alias}",
+        "format-alt": "󰂱 {device_alias}",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
@@ -204,10 +197,10 @@
     "backlight": {
         "device": "intel_backlight",
         "interval": 1,
-        "on-scroll-down": "brightnessctl set 5%-",
-        "on-scroll-up": "brightnessctl set +5%",
-        "format": "{icon} {percent}%",
-        "format-icons": ["   ", "  "],
+        "on-scroll-down": "brightnessctl set 4%-",
+        "on-scroll-up": "brightnessctl set +4%",
+        "format": "{icon}  {percent}%",
+        "format-icons": ["", ""],
         "on-click": "wdisplays",
         "tooltip": false
 
@@ -215,6 +208,36 @@
     "tray": {
         "icon-size":18,
         "spacing": 9
+    },
+    
+    "custom/play-pause": {
+        "format": "",
+        "on-click": "playerctl play-pause",
+        "tooltip": false,
+    },
+    "custom/next" : {
+        "format": "",
+        "on-click": "playerctl next",
+        "tooltip": false,
+    },
+    "custom/previous": {
+        "format": "",
+        "on-click": "playerctl previous",
+        "tooltip": false,
+    },
+    "group/media-controls": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-hardware",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/cava",
+            "custom/previous",
+            "custom/play-pause",
+            "custom/next",
+        ]
     },
     "group/hardware": {
         "orientation": "inherit",
@@ -243,7 +266,6 @@
         ]
     },
     "group/power": {
-        "format": "  ",
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 250,
@@ -257,31 +279,20 @@
     },
 
     "custom/swaync":{
-        "format": "  ",
+        "format": "",
         "on-click": "swaync-client -t -sw",
         "tooltip": false,
     },
         "custom/wofi":{
-        "format": "  ",
+        "format": "",
         "on-click": "wofi",
         "tooltip": false,
     },
 	"custom/power": {
-		"format": "  ",
+		"format": "",
 		"on-click": "wlogout",
         "tooltip": false,
 	},
-    "custom/cava-toggle": {
-        "format": "{icon}",
-        "format-icons": {
-            "running": "▮",
-            "stopped": "▷"
-        },
-        "exec": "~/.config/waybar/scripts/toggle-cava.sh",
-        "return-type": "json",
-        "on-click": "~/.config/waybar/scripts/toggle-cava.sh",
-        "tooltip": true
-    },
     "custom/cava": {
         "exec": "~/.config/waybar/scripts/cava.sh",
         "format": "{}",
