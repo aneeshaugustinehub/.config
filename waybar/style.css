@@ -15,23 +15,26 @@ window#waybar {
 }
 
 /* --- General Module Styling --- */
-#custom-new-workspace{
 
-}
 #group-hardware{
   color: @foreground;
   background-color: @background;
   padding: 0 2px;
   margin: 0  2px;
 }
-
+#custom-new-workspace,
 #custom-wofi,
 #custom-power,
 #custom-swaync{
+  color: @foreground-alt;
   padding: 0 3px;
   margin: 0  4px;
 }
-#tray,
+#tray {
+  background-color: @background;
+  padding: 0 5px;
+  margin: 0  2px;
+}
 #cpu,
 #memory,
 #temperature,
@@ -53,9 +56,11 @@ window#waybar {
 #custom-play-pause,
 #custom-next,
 #custom-previous {
+  color: @foreground-alt;
   padding: 0 3px;
   margin: 0  5px;
 }
+
 /* --- Workspaces Styling --- */
 
 #workspaces button {
