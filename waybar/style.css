@@ -24,12 +24,7 @@ window#waybar {
   padding: 0 2px;
   margin: 0  2px;
 }
-#custom-media-controls,
-#hyprland-window,
-#group-network{
-  padding: 0 10px;
-  margin: 0  10px;
-}
+
 #custom-wofi,
 #custom-power,
 #custom-swaync{
@@ -37,6 +32,9 @@ window#waybar {
   margin: 0  4px;
 }
 #tray,
+#cpu,
+#memory,
+#temperature,
 #custom-airplane,
 #bluetooth,
 #pulseaudio,
@@ -45,9 +43,6 @@ window#waybar {
 #network,
 #clock,
 #window,
-#cpu,
-#memory,
-#temperature,
 #workspaces,
 #custom {
   color: @foreground;
@@ -55,7 +50,12 @@ window#waybar {
   padding: 0 5px;
   margin: 0  2px;
 }
-
+#custom-play-pause,
+#custom-next,
+#custom-previous {
+  padding: 0 3px;
+  margin: 0  5px;
+}
 /* --- Workspaces Styling --- */
 
 #workspaces button {

@@ -67,7 +67,7 @@
     },
 
     "clock": {
-        "format": " {:%I:%M %p}",
+        "format": "   {:%I:%M %p}",
         "format-alt":"{:%A  %I:%M %p  %d-%m-%y}",
         "tooltip-format": "<big>{:%A, %d,}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -112,10 +112,10 @@
 
     "network": {
         "interval": 1,
-        "format": "✈️",
-        "format-wifi": "",
-        "format-ethernet":"",
-        "format-disconnected": "",
+        "format": "✈️ ",
+        "format-wifi": " ",
+        "format-ethernet":" ",
+        "format-disconnected": " ",
         "format-alt": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
         "tooltip-format-disconnected": "Error",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits} ",
@@ -136,7 +136,7 @@
         "disable-scroll": false,
         "format": "{icon}",
         "format-icons": {
-            "urgent": "",
+            "urgent": " ",
             //"focused": " ",
             //"default": " ",
             //"default": "󰲌 ",
