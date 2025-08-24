@@ -216,7 +216,7 @@
     "custom/next" : {
         "format": "",
         "on-click": "playerctl next",
-        "tooltip": false,
+        "tooltip": true,
     },
     "custom/previous": {
         "format": "",
@@ -301,8 +301,7 @@
       ],
         "on-click": "pkill cava",
         "on-click-right": "/home/av/.config/swaync/refresh.sh",
-
-        "tooltip": false
+        "tooltip": true
     },
     "custom/airplane": {
         "format": "{}",

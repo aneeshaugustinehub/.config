@@ -10,28 +10,22 @@
 }
 
 window#waybar {
-  background: rgba(255, 255, 255, 0.304);
+  background-color: alpha(@foreground,.6);
   color: @foreground;
 }
 
 /* --- General Module Styling --- */
 
-#group-hardware{
-  color: @foreground;
-  background-color: @background;
-  padding: 0 2px;
-  margin: 0  2px;
-}
 #custom-new-workspace,
 #custom-wofi,
 #custom-power,
 #custom-swaync{
   color: @background;
-  padding: 0 3px;
-  margin: 0  4px;
+  padding: 0 0px;
+  margin: 0  6px;
 }
 #tray {
-  background-color: @background;
+  background-color: @color0;
   padding: 0 5px;
   margin: 0  2px;
 }
@@ -39,7 +33,7 @@ window#waybar {
 #memory,
 #temperature{
   color: @foreground;
-  background-color: @background;
+  background-color: @color0;
   padding: 0 5px;
   margin: 0  1px;
 }
@@ -47,71 +41,92 @@ window#waybar {
 #bluetooth,
 #network,
 #pulseaudio,
-#battery,
+#battery {
+  color: @foreground;
+  background-color: @color0;
+  padding: 0 5px;
+  margin: 0  2px;
+}
+#battery.warning {
+    background: @warning;
+    color: @color0;
+    padding: 0 5px;
+    margin: 0  2px;
+}
+
+#battery.critical {
+    background: @critical;
+    color: @color0;
+    padding: 0 5px;
+    margin: 0  2px;
+}
 #backlight,
 #clock,
 #window,
 #workspaces,
 #custom {
   color: @foreground;
-  background-color: @background;
+  background-color: @color0;
   padding: 0 5px;
   margin: 0  2px;
 }
 
 #custom-cava {
-    color: @color4; /* Match your color scheme */
-    background-color: @background;
+    color: @color5; /* Match your color scheme */
+    background-color: @color0;
     font-size: 10px; /* Adjust font size to change the bar height */
     padding: 0 5px;
+    margin: 0  3px;
     font-family: "JetBrainsMono Nerd Font Propo", monospace;
 }
 #custom-play-pause,
 #custom-next,
 #custom-previous {
-  color: @background;
+  color: @color0;
   padding: 0 3px;
-  margin: 0  5px;
+  margin: 0  4px;
 }
 
 /* --- Workspaces Styling --- */
 
 #workspaces button {
-  background-color: @background;
+  background-color: @color0;
   color: @foreground;
   border: none;
   box-shadow: none;
   text-shadow: none;
   transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.15s ease, padding-right 0.15s ease;
-  padding: 0 2px;
-  margin: 0  2px;
+  padding: 0 3px;
+  margin: 0  0px;
 }
 
 #workspaces button.active {
-  background-color: @color4;
+  background-color: @color5;
   color: @background;
-  padding: 0 5px;
-  margin: 0  5px;
+  padding: 0 6px;
+  margin: 0  1px;
 }
 
 #workspaces button.active:hover {
   color: @background;
-  background: @color5;
+  background: @color4;
 }
 
 #workspaces button.empty {
   color: @background;
-  background: @color5;
+  background: @color4;
 }
 
 #workspaces button:hover {
-  background: @color5;
+  background: @color4;
   color: @background;
 }
 
 #workspaces button.urgent {
   background-color: @urgent;
   color: @background;
+  padding: 0 3px;
+  margin: 0  0px;
 }
 
 
