@@ -1,6 +1,5 @@
 // =============================================================================
 // Waybar configuration
-// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
 // =============================================================================
 
 {
@@ -203,11 +202,10 @@
         "format-icons": ["", ""],
         "on-click": "wdisplays",
         "tooltip": false
-
     },
     "tray": {
-        "icon-size":18,
-        "spacing": 9
+        "icon-size":16,
+        "spacing": 1
     },
     
     "custom/play-pause": {

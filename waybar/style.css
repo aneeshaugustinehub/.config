@@ -5,12 +5,12 @@
   font-size: 14px;
   border-radius: 7px;
   font-weight: bold;
-  padding: .2 0px;
-  margin: 0  0px;
+  padding: 0 0px;
+  margin: .2  0px;
 }
 
 window#waybar {
-  background-color: @background-alt;
+  background: rgba(255, 255, 255, 0.304);
   color: @foreground;
 }
 
@@ -26,7 +26,7 @@ window#waybar {
 #custom-wofi,
 #custom-power,
 #custom-swaync{
-  color: @foreground-alt;
+  color: @background;
   padding: 0 3px;
   margin: 0  4px;
 }
@@ -58,11 +58,18 @@ window#waybar {
   padding: 0 5px;
   margin: 0  2px;
 }
-#custom-cava,
+
+#custom-cava {
+    color: @color4; /* Match your color scheme */
+    background-color: @background;
+    font-size: 10px; /* Adjust font size to change the bar height */
+    padding: 0 5px;
+    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+}
 #custom-play-pause,
 #custom-next,
 #custom-previous {
-  color: @foreground-alt;
+  color: @background;
   padding: 0 3px;
   margin: 0  5px;
 }
@@ -81,7 +88,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: @active;
+  background-color: @color4;
   color: @background;
   padding: 0 5px;
   margin: 0  5px;
@@ -89,16 +96,16 @@ window#waybar {
 
 #workspaces button.active:hover {
   color: @background;
-  background: @hover;
+  background: @color5;
 }
 
 #workspaces button.empty {
   color: @background;
-  background: @color1;
+  background: @color5;
 }
 
 #workspaces button:hover {
-  background: @hover;
+  background: @color5;
   color: @background;
 }
 
@@ -117,12 +124,4 @@ window#waybar {
 
 window#waybar.empty #window {
   background-color: transparent;
-}
-
-#custom-cava {
-    color: @active; /* Match your color scheme */
-    background-color: @background;
-    font-size: 10px; /* Adjust font size to change the bar height */
-    padding: 0 5px;
-    font-family: "JetBrainsMono Nerd Font Propo", monospace;
 }
