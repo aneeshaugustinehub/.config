@@ -5,7 +5,7 @@
   font-size: 14px;
   border-radius: 7px;
   font-weight: bold;
-  padding: 0 0px;
+  padding: .2 0px;
   margin: 0  0px;
 }
 
@@ -37,13 +37,18 @@ window#waybar {
 }
 #cpu,
 #memory,
-#temperature,
+#temperature{
+  color: @foreground;
+  background-color: @background;
+  padding: 0 5px;
+  margin: 0  1px;
+}
 #custom-airplane,
 #bluetooth,
+#network,
 #pulseaudio,
 #battery,
 #backlight,
-#network,
 #clock,
 #window,
 #workspaces,
@@ -53,6 +58,7 @@ window#waybar {
   padding: 0 5px;
   margin: 0  2px;
 }
+#custom-cava,
 #custom-play-pause,
 #custom-next,
 #custom-previous {

@@ -11,7 +11,7 @@
 }
 
 #window {
-    background-color: alpha(@background-alt, .5);
+    background-color: alpha(@background-alt,);
 }
 
 #outer-box {
