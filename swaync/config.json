@@ -64,11 +64,11 @@
       "text": "o_o"
     },
     "mpris": {
-      "image-size": 50,
+      "image-size": 100,
       "image-radius": 20
     },
       "backlight": {
-      "label": "",
+      "label": "",
       "device": "intel_backlight",
       "min": 10
     },
@@ -108,7 +108,7 @@
         },
         {
           "label": "󰸽",
-          "command": "kitty fastfetch &,"
+          "command": "kitty fastfetch"
         },
         {
 

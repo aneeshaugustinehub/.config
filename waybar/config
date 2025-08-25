@@ -11,7 +11,6 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 20,
 
     "modules-left": [
         "custom/wofi",
@@ -22,8 +21,9 @@
 
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/window",
     ],
+
     "modules-right": [
       "custom/keyboard-layout",
         "group/network",
@@ -44,7 +44,7 @@
         "interval": 10,
         "states": {
             "warning": 30,
-            "critical": 15
+            "critical": 15,
         },
         // Connected to AC
         "format": "󰂄 {capacity}%", // Icon: bolt
@@ -87,16 +87,6 @@
           "warning": 70,
           "critical": 90
         }
-    },
-
-    "custom/keyboard-layout": {
-      "exec": "hyprlandmsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-      // Interval set only as a fallback, as the value is updated by signal
-      "interval": 30,
-      "format": "  {}", // Icon: keyboard
-      // Signal sent by hyprland key binding (~/.config/hyprland/key-bindings)
-      "signal": 1, // SIGHUP
-      "tooltip": false
     },
 
     "memory": {
@@ -166,7 +156,7 @@
         "on-click": "pavucontrol"
     },
     "temperature": {
-      "critical-threshold": 80,
+      "critical-threshold": 70,
       "interval": 5,
       "format": "{icon}  {temperatureC}°C",
       "format-icons": [
@@ -205,7 +195,7 @@
     },
     "tray": {
         "icon-size":16,
-        "spacing": 1
+        "spacing": 5,
     },
     
     "custom/play-pause": {
@@ -221,9 +211,11 @@
     "custom/previous": {
         "format": "",
         "on-click": "playerctl previous",
+        "on-click-right": "~/.config/waybar/scripts/cava.sh",
         "tooltip": false,
     },
     "group/media-controls": {
+        "format": "",
         "orientation": "inherit",
         "drawer": {
             "transition-duration": 500,
@@ -277,13 +269,13 @@
     },
 
     "custom/swaync":{
-        "format": "",
+        "format": " ",
         "on-click": "swaync-client -t -sw",
         "tooltip": false,
     },
     "custom/wofi":{
-        "format": "",
-        "on-click": "wofi",
+        "format": " ",
+        "on-click": "rofi -show drun",
         "tooltip": false,
     },
 	"custom/power": {
@@ -292,16 +284,16 @@
         "tooltip": false,
 	},
     "custom/cava": {
-        "exec": "~/.config/waybar/scripts/cava.sh",
-        "format": "{}",
+        //"exec": "~/.config/waybar/scripts/cava.sh",
+        "format": "{}",
         "tail": true,
         "format-alt": "{icon}",
         "format-icons": [
-          "",
+          "",
       ],
         "on-click": "pkill cava",
         "on-click-right": "/home/av/.config/swaync/refresh.sh",
-        "tooltip": true
+        "tooltip": false
     },
     "custom/airplane": {
         "format": "{}",

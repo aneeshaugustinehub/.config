@@ -6,7 +6,7 @@
   border-radius: 7px;
   font-weight: bold;
   padding: 0 0px;
-  margin: .2  0px;
+  margin: .2px  0px;
 }
 
 window#waybar {
@@ -37,6 +37,13 @@ window#waybar {
   padding: 0 5px;
   margin: 0  1px;
 }
+#temperature.critical{
+  color: @color0;
+  background-color: @critical;
+  padding: 0 5px;
+  margin: 0  1px;
+}
+
 #custom-airplane,
 #bluetooth,
 #network,

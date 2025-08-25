@@ -10,8 +10,8 @@ columns=3
 
 ## Geometry
 width=50%
-height=40%
-location=bottom
+height=50%
+location=center
 orientation=vertical
 halign=fill
 line_wrap=off
