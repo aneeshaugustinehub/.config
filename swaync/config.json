@@ -117,7 +117,7 @@
         },
         {
           "label": "",
-          "command": "/home/av/.config/wofi/powermenu.sh"
+          "command": "/home/av/.config/rofi/powermenu.sh"
         }
       ]
     }
