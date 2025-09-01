@@ -15,9 +15,18 @@ window#waybar {
 }
 
 /* --- General Module Styling --- */
+#custom-menu,
+#custom-close-workspace{
+  color: @background;
+  padding: 0 5px;
+  margin: 0  3px;
+}
 
+#custom-close-workspace:hover{
+  color: @critical;
+
+}
 #custom-new-workspace,
-#custom-wofi,
 #custom-power,
 #custom-swaync{
   color: @background;
@@ -145,5 +154,5 @@ window#waybar {
 }
 
 window#waybar.empty #window {
-  background-color: transparent;
+  background-color: red;
 }

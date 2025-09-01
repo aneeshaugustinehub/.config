@@ -7,13 +7,20 @@
     // Global configuration
     // -------------------------------------------------------------------------
 
+
     "layer": "top",
+    "spacing": 0,
+    "height": 0,
+    "margin-bottom":0,
+    "margin-top": 0,
     "position": "top",
+    "margin-right": 5,
+    "margin-left": 5,
 
     // If height property would be not present, it'd be calculated dynamically
 
     "modules-left": [
-        "custom/wofi",
+        "custom/menu",
         "hyprland/workspaces",
         "custom/new-workspace",
         "group/hardware",
@@ -22,6 +29,8 @@
     ],
     "modules-center": [
         "hyprland/window",
+        "custom/close-workspace",
+
     ],
 
     "modules-right": [
@@ -134,9 +143,16 @@
 
     "custom/new-workspace": {
         "format": " ",
-        "tooltip": "false", 
+        "tooltip": false, 
         "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
         "return-type": "json" // Ensure the module expects JSON output
+    },
+
+    "custom/close-workspace": {
+        "format": "󱎘",
+        "on-click":"hyprctl dispatch killactive", // Hyprland command to close the current workspace
+        "tooltip": false,
+
     },
 
     "pulseaudio": {
@@ -166,7 +182,7 @@
           "", // Icon: temperature-three-quarters
           ""  // Icon: temperature-full
       ],
-      "tooltip": true
+      "tooltip": true,
     },
 
     "bluetooth": {
@@ -273,7 +289,7 @@
         "on-click": "swaync-client -t -sw",
         "tooltip": false,
     },
-    "custom/wofi":{
+    "custom/menu":{
         "format": " ",
         "on-click": "rofi -show drun",
         "tooltip": false,
