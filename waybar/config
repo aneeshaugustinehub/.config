@@ -22,12 +22,12 @@
     "modules-left": [
         "custom/menu",
         "hyprland/workspaces",
+        "custom/new-workspace",
         "group/hardware",
         "group/media-controls",
 
     ],
     "modules-center": [
-        "custom/new-workspace",
         "hyprland/window",
         "custom/close-workspace",
 
@@ -109,17 +109,19 @@
     },
 
     "network": {
-        "interval": 1,
+        "interval": 2,
         "format": "✈️ ",
         "format-wifi": " ",
         "format-ethernet":" ",
         "format-disconnected": " ",
         "format-alt": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
+//        "format-alt": "{essid} ({signalStrength}%)",
         "tooltip-format-disconnected": "Error",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ↓{bandwidthDownBits} ↑{bandwidthUpBits} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname} 🖧 ",
 //        "on-click-right": "kitty nmtui",
-        "on-click-right": "nm-connection-editor"
+        "on-click-right": "nm-connection-editor",
+        "on-click": "nm-applet --indicator "
     },
 
 
@@ -187,12 +189,12 @@
     },
 
     "bluetooth": {
-        "format-on": " on",
-        "format-off": "󰂲 off",
-        "format-disabled": "󰂲 dis",
+        "format-on": " ",
+        "format-off": "󰂲 ",
+        "format-disabled": "󰂲 ",
         "format-connected": "󰂱",
         "format-connected-battery": "󰥉 {device_battery_percentage}%",
-        "format-alt": "󰂱 {device_alias}",
+        "format-alt": " {device_alias}",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
