@@ -19,7 +19,7 @@
 
 .control-center {
   background: alpha(@background, .6);
-  color: @background;
+  color: @forground;
   border-radius: 15px;
   border: 1px solid @color9;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
@@ -31,7 +31,7 @@
 .control-center .notification-row .notification-background,
 .control-center .notification-row .notification-background .notification.critical {
   background-color: @color5;
-  color: @foreground;
+  color: @background;
   border-radius: 16px;
   margin: 4px 0px;
   padding: 4px;
@@ -70,7 +70,7 @@
 /* Buttons */
 
 .control-center .notification-row .notification-background .close-button {
-  background: transparent;
+  background: @background;
   border-radius: 6px;
   color: @foreground;
   margin: 0px;
@@ -177,7 +177,7 @@ progressbar {
 }
 
 .widget-dnd > switch:checked {
-  background: @color4;
+  background: @color9;
   color: @color5;
 
 }
@@ -203,55 +203,75 @@ progressbar {
 .widget-buttons-grid>flowbox>flowboxchild>button {
   margin: 4px 10px;
   padding: 6px 12px;
-  background: transparent;
+  background: @color9;
   border-radius: 8px;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @color5;
+  background: @color0;
   color: @color5;
 }
 
 
   /* Music player */
 .widget-mpris {
+    background-color: @color0;
     border-radius: 16px;
     margin:  2px 6px;
 }
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
 .widget-mpris-player {
-  background-color: alpha(#000000, 1.0);
+  background-color: @color0;
+  background-color: @color0;
   border-radius: 16px;
 
 }
 
 .widget-mpris > box > button {
+  background-color: @color0;
   color: @foreground;
   border-radius: 20px;
+
 }
  
 .widget-mpris button {
-  color: alpha(@foreground,.6);
+  background-color: alpha(@foreground,1);
+  color: @color0;
+  font-size: 15;
+  border-radius: 10px;
+  margin:  2px 6px;
+  padding: 5px 5px;
 }
 
+
 .widget-mpris button:hover {
-  color: @color5;
+  background-color: @color5;
+  color: @color0;
 }
 
 .widget-mpris-album-art {
+  background-color: @color0;
   border-radius: 16px;
 }
  
 .widget-mpris-title {
+  background-color: @color0;
   color: @color5;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+
 }
  
 .widget-mpris-subtitle {
+  background-color: @color0;
     font-weight: 500;
     font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+
 }
 
 /* Volume */

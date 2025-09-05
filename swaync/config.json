@@ -99,10 +99,6 @@
           "command": "waypaper"
         },
         {
-          "label": "󰧕",
-          "command": "kitty  yay -Syu"
-        },
-        {
           "label": "󰏘",
           "command": "nwg-look"
         },
@@ -111,9 +107,16 @@
           "command": "kitty fastfetch"
         },
         {
-
-                "label": "󰃢",
+          "label": "󰃢",
           "command": "kitty yay -Scc"
+        },
+        {
+          "label": "",
+          "command": "kitty  yay -Syu"
+        },
+        {
+          "label": "",
+          "command": "kitty sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
         },
         {
           "label": "",

@@ -22,12 +22,12 @@
     "modules-left": [
         "custom/menu",
         "hyprland/workspaces",
-        "custom/new-workspace",
         "group/hardware",
         "group/media-controls",
 
     ],
     "modules-center": [
+        "custom/new-workspace",
         "hyprland/window",
         "custom/close-workspace",
 
@@ -142,7 +142,7 @@
     },
 
     "custom/new-workspace": {
-        "format": " ",
+        "format": "󱇬",
         "tooltip": false, 
         "on-click": "hyprctl dispatch workspace empty", // Hyprland command to create a new empty workspace
         "return-type": "json" // Ensure the module expects JSON output
@@ -169,7 +169,8 @@
             "car": "",
             "default": ["", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     },
     "temperature": {
       "critical-threshold": 70,

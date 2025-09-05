@@ -15,6 +15,7 @@ window#waybar {
 }
 
 /* --- General Module Styling --- */
+#custom-new-workspace,
 #custom-menu,
 #custom-close-workspace{
   color: @background;
@@ -26,7 +27,6 @@ window#waybar {
   color: @critical;
 
 }
-#custom-new-workspace,
 #custom-power,
 #custom-swaync{
   color: @background;
@@ -154,5 +154,5 @@ window#waybar {
 }
 
 window#waybar.empty #window {
-  background-color: red;
+  background-color: transparent;
 }
