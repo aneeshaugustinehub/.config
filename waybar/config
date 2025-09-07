@@ -28,6 +28,7 @@
 
     ],
     "modules-center": [
+        "custom/all-settings",
         "hyprland/window",
         "custom/close-workspace",
 
@@ -35,13 +36,14 @@
 
     "modules-right": [
       "custom/keyboard-layout",
-        "group/network",
-        "backlight",
-        "pulseaudio",
-        "tray",
-        "clock",
-        "battery",
-        "group/power",
+      "group/bluetooth",
+      "group/network",
+      "backlight",
+      "pulseaudio",
+      "tray",
+      "clock",
+      "battery",
+      "group/power",
     ],
 
 
@@ -110,15 +112,15 @@
 
     "network": {
         "interval": 2,
-        "format": "✈️ ",
-        "format-wifi": " ",
+        "format":"✈️ ",
+        "format-wifi":" ",
         "format-ethernet":" ",
-        "format-disconnected": " ",
+        "format-disconnected":" ",
         "format-alt": "↓{bandwidthDownBits} ↑{bandwidthUpBits}",
 //        "format-alt": "{essid} ({signalStrength}%)",
         "tooltip-format-disconnected": "Error",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname} 🖧 ",
+        "tooltip-format-ethernet": "{ifname}",
 //        "on-click-right": "kitty nmtui",
         "on-click-right": "nm-connection-editor",
         "on-click": "nm-applet --indicator "
@@ -128,7 +130,9 @@
     "hyprland/window": {
         "format": "{class}",
         "format-alt": "{title}",
-        "max-length": 60
+        "max-length": 60,
+        "tooltip": true,
+
     },
 
     "hyprland/workspaces": {
@@ -140,7 +144,9 @@
             //"focused": " ",
             //"default": " ",
             //"default": "󰲌 ",
-        }
+        },
+        "tooltip": true,
+
     },
 
     "custom/new-workspace": {
@@ -189,9 +195,9 @@
     },
 
     "bluetooth": {
-        "format-on": " ",
-        "format-off": "󰂲 ",
-        "format-disabled": "󰂲 ",
+        "format-on": "",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
         "format-connected": "󰂱",
         "format-connected-battery": "󰥉 {device_battery_percentage}%",
         "format-alt": " {device_alias}",
@@ -199,7 +205,12 @@
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+        "on-click": "rfkill unblock bluetooth",
         "on-click-right": "blueman-manager",
+    },
+    "custom/btoff": {
+        "format": "󰂲 off",
+        "on-click": "~/.config/waybar/scripts/bt-toggle.sh",
     },
 
     "backlight": {
@@ -217,6 +228,11 @@
         "spacing": 5,
     },
     
+    "custom/all-settings": {
+        "format": "",
+        "on-click": "~/.config/rofi/rofi-list.sh",
+        "tooltip": false,
+    },    
     "custom/play-pause": {
         "format": "",
         "on-click": "playerctl play-pause",
@@ -225,7 +241,7 @@
     "custom/next" : {
         "format": "",
         "on-click": "playerctl next",
-        "tooltip": true,
+        "tooltip": false,
     },
     "custom/previous": {
         "format": "",
@@ -237,7 +253,7 @@
         "format": "",
         "orientation": "inherit",
         "drawer": {
-            "transition-duration": 500,
+            "transition-duration": 250,
             "children-class": "not-hardware",
             "transition-left-to-right": true
         },
@@ -251,7 +267,7 @@
     "group/hardware": {
         "orientation": "inherit",
         "drawer": {
-            "transition-duration": 500,
+            "transition-duration": 250,
             "children-class": "not-hardware",
             "transition-left-to-right": false
         },
@@ -271,13 +287,24 @@
         "modules": [
             "network",
             "custom/airplane",
+        ]
+    },
+    "group/bluetooth": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "not-hardware",
+            "transition-left-to-right": false
+        },
+        "modules": [
             "bluetooth",
+            "custom/btoff",
         ]
     },
     "group/power": {
         "orientation": "inherit",
         "drawer": {
-            "transition-duration": 250,
+            "transition-duration": 150,
             "children-class": "not-hardware",
             "transition-left-to-right": false
         },
@@ -299,7 +326,7 @@
     },
 	"custom/power": {
 		"format": "",
-		"on-click": "/home/av/.config/rofi/powermenu.sh",
+		"on-click": "/home/av/.config/rofi/list/powermenu/powermenu.sh",
         "tooltip": false,
 	},
     "custom/cava": {

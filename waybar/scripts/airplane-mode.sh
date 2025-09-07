@@ -13,8 +13,8 @@ if [ "$1" == "toggle" ]; then
     fi
 else
     if [ "$STATUS" == "enabled" ]; then
-        echo "✈️ Off "
+        echo "✈️ Off"
     else
-        echo "✈️ On "
+        echo "✈️ On"
     fi
 fi

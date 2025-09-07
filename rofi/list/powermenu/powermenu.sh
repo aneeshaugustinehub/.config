@@ -11,7 +11,7 @@ options=(
 )
 
 # Turn array into newline-separated string
-choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -theme ~/.config/rofi/themes/powermenu-grid.rasi -p "Power Menu")
+choice=$(printf "%s\n" "${options[@]}" | rofi -dmenu -theme ~/.config/rofi/list/powermenu/powermenu.rasi -p "Power Menu")
 
 case "$choice" in
   "  Lock") swaylock ;;

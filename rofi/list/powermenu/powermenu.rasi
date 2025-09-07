@@ -2,6 +2,7 @@
  * ROFI Power Menu Red Theme
  *
  */
+@import "~/.cache/wal/colors-rofi-dark"
 
 configuration {
   font: "JetBrainsMono Nerd Font Medium 13";
@@ -18,20 +19,13 @@ configuration {
   padding: 0;
   spacing: 0;
 
-  bg: #18181b;
-  bg-alt: #27272a;
-  fg: #eeeeee;
-  fg-alt: #777777;
-  accent: #ef4444;
-
-  background-color: @bg;
-  text-color: @fg-alt;
 }
 
 window {
   padding: 6px;
   transparency: "real";
   width: 400;
+  border-radius: 5px;
 }
 
 mainbox {
@@ -55,7 +49,7 @@ element-text {
 }
 
 element-text selected {
-  background-color: @bg-alt;
-  text-color: @fg;
+  background-color: @background-alt;
+  text-color: @background;
   border-radius: 5px;
 }

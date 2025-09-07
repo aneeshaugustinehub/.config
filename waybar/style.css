@@ -15,6 +15,7 @@ window#waybar {
 }
 
 /* --- General Module Styling --- */
+#custom-all-settings,
 #custom-new-workspace,
 #custom-menu,
 #custom-close-workspace{
@@ -52,15 +53,23 @@ window#waybar {
   padding: 0 5px;
   margin: 0  1px;
 }
+#network.connected,
+#network.wifi,
+#bluetooth.connected{
+  background-color: @color5;
+  color: @background;
 
-#custom-airplane,
+}
+
+#custom-btoff,
 #bluetooth,
+#custom-airplane,
 #network,
 #pulseaudio,
 #battery {
   color: @foreground;
   background-color: @color0;
-  padding: 0 5px;
+  padding: 0 8px 0 6.5px;
   margin: 0  2px;
 }
 #battery.warning {

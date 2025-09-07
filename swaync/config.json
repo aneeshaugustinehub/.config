@@ -120,7 +120,7 @@
         },
         {
           "label": "",
-          "command": "/home/av/.config/rofi/powermenu.sh"
+          "command": "/home/av/.config/rofi/list/powermenu.sh"
         }
       ]
     }

@@ -11,6 +11,7 @@ configuration {
 }
 
 
+@import "~/.cache/wal/colors-rofi-dark"
 
 
 /*****----- Global Properties -----*****/
@@ -28,11 +29,11 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
+    location:                    east;
     anchor:                      center;
     fullscreen:                  false;
     width:                       500px;
-    x-offset:                    0px;
+    x-offset:                    -10px;
     y-offset:                    0px;
 
     /* properties for all widgets */
@@ -75,13 +76,13 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     12px 20px 12px 15px;
     border-radius:               6px;
-    background-color:            @background;
-    text-color:                  @background-alt;
+    background-color:            #94e2d5;
+    text-color:                  @background;
 }
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       420px;
+    width:                       320px;
     padding:                     12px 16px 8px 16px;
     border-radius:               6px;
     background-color:            @background-alt;
@@ -118,8 +119,8 @@ button selected {
 listview {
     padding :                    6px;
     enabled:                     true;
-    columns:                     2;
-    lines:                       8;
+    columns:                     1;
+    lines:                       10;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -129,9 +130,9 @@ listview {
     fixed-columns:               true;
 
     spacing:                     8px;
-    margin: 			         16px 12px;
-    border-radius: 		         6px;
-    background-color:            @background;
+    margin: 			                16px 12px;
+    border-radius: 		            6px;
+    background-color:            #1e1e2e;
     text-color:                  @foreground;
     cursor:                      "default";
 }
@@ -141,7 +142,6 @@ element {
     enabled:                     true;
     spacing:                     0px;
     padding:                     2px 0px;
-    margin: 			         3px 0px;
     border-radius:               6px;
     background-color:            transparent;
     text-color:                  @foreground;
