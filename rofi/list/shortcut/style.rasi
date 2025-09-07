@@ -29,7 +29,7 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    east;
+    location:                    center;
     anchor:                      center;
     fullscreen:                  false;
     width:                       500px;
