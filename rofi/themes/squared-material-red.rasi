@@ -75,8 +75,8 @@ textbox-prompt-colon {
     str:                         "";
     padding:                     12px 20px 12px 15px;
     border-radius:               6px;
-    background-color:            @background;
-    text-color:                  @background-alt;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
 }
 entry {
     enabled:                     true;
