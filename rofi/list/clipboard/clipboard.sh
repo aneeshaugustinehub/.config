@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-
-if [[ -z $(wl-paste) ]]; then
-    dunstify -h string:x-dunst-stack-tag:clip_notif -t 4000 -u critical "Clipboard Manager" "Clipboard is empty"
-    exit
-fi
+#!/bin/bash
 
 dir="$HOME/.config/rofi/list/clipboard"
 
@@ -19,7 +15,7 @@ if [[ $choice == *"Wipe Clipboard"* ]]; then
     if [[ $confirmation =~ "$yes" ]]; then
         cliphist wipe
         wl-copy -c
-        dunstify -h string:x-dunst-stack-tag:clip_notif -t 4000 -u critical "Clipboard Manager" "Clipboard has been wiped"
+        notify-send -h string:x-dunst-stack-tag:clip_notif -t 4000 -u critical "Clipboard Manager" "Clipboard has been wiped"
     fi
     exit
     elif [[ -n $choice ]]; then

@@ -1,1 +1,29 @@
-@theme "~/.config/rofi/themes/squared-material-red.rasi"
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+//@theme "~/.config/rofi/themes/squared-material-red.rasi"
+
+//@theme "/usr/share/rofi/themes/fullscreen-preview.rasi"
+
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+
+//@theme "/usr/share/rofi/themes/fancy2.rasi"
+
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+
+//@theme "/usr/share/rofi/themes/docu.rasi"
+
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+
+//@theme "/home/av/.config/rofi/themes/squared-material-red.rasi"
+
+//@theme "/usr/share/rofi/themes/iggy.rasi"
+
+//@theme "/usr/share/rofi/themes/solarized.rasi"
+
+//@theme "/home/av/.config/rofi/themes/squared-material-red.rasi"
+
+//@theme "/usr/share/rofi/themes/fullscreen-preview.rasi"
+
+//@theme "/usr/share/rofi/themes/iggy.rasi"
+
+@theme "/home/av/.config/rofi/themes/squared-material-red.rasi"
