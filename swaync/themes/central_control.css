@@ -1,20 +1,16 @@
-@import url("/home/av/.config/color/color.css");
-
 
 * {
   all: unset;
   font-size: 14px;
   font-family: "JetBrains Mono Nerd Font 10";
   transition: 200ms;
-
 }
 
-
-/* Avoid 'annoying' backgroud */
+/* Avoid 'annoying' background */
 .blank-window {  
-  background: transparent;  
+  background: transparent;
 }
-  
+
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
@@ -25,6 +21,19 @@
   box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
   margin: 18px;
   padding: 12px;
+}
+.control-center slider {
+  border-radius: 9px;
+  -gtk-outline-radius: 9px;
+  background-color: @color0;
+}
+
+.control-center slider:hover {
+  background-color: @color6;
+}
+
+.control-center slider:active {
+  background-color: @color7;
 }
 
 /* Notifications  */
@@ -60,7 +69,6 @@
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
   background: @color0;
   color: @color0;
-
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
@@ -68,7 +76,6 @@
 }
 
 /* Buttons */
-
 .control-center .notification-row .notification-background .close-button {
   background: @background;
   border-radius: 6px;
@@ -85,30 +92,9 @@
   background-color: @color5;
 }
 
-progressbar{
-    background-color: @color5;
-
-}
-
-progress{
-      background-color: @color2;
-
-}
-
-trough {
-
-}
-progressbar {
-  background-color: @color5;
-  color: @color5;
-
-}
-
 /* Notifications expanded-group */
-
 .notification-group {
   margin: 2px 8px 2px 8px;
-
 }
 .notification-group-headers {
   font-weight: bold;
@@ -136,7 +122,7 @@ progressbar {
 
 /* WIDGETS --------------------------------------------------------------------------- */
 
-  /* Notification clear button */
+/* Notification clear button */
 .widget-title {
   font-size: 1.2em;
   margin: 6px;
@@ -156,7 +142,7 @@ progressbar {
   background-color: @color8;
 }
 
-  /* Do not disturb */
+/* Do not disturb */
 .widget-dnd {
   margin: 6px;
   font-size: 1.2rem;
@@ -179,7 +165,6 @@ progressbar {
 .widget-dnd > switch:checked {
   background: @color9;
   color: @color5;
-
 }
 
 .widget-dnd > switch:checked:hover {
@@ -191,7 +176,7 @@ progressbar {
   border-radius: 6px;
 }
 
-  /* Buttons menu */
+/* Buttons menu */
 .widget-buttons-grid {
   font-size: x-large;
   padding: 6px 2px;
@@ -212,29 +197,25 @@ progressbar {
   color: @color5;
 }
 
-
-  /* Music player */
+/* Music player */
 .widget-mpris {
-    background-color: @color0;
-    border-radius: 16px;
-    margin:  2px 6px;
-}
-
-  /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
-.widget-mpris-player {
-  background-color: @color0;
   background-color: @color0;
   border-radius: 16px;
+  margin:  2px 6px;
+}
 
+/* NOTE: Background needs *opacity 1* otherwise will turn into the album art blurred  */
+.widget-mpris-player {
+  background-color: @color0;
+  border-radius: 16px;
 }
 
 .widget-mpris > box > button {
   background-color: @color0;
   color: @foreground;
   border-radius: 20px;
-
 }
- 
+
 .widget-mpris button {
   background-color: alpha(@foreground,1);
   color: @color0;
@@ -243,7 +224,6 @@ progressbar {
   margin:  2px 6px;
   padding: 5px 5px;
 }
-
 
 .widget-mpris button:hover {
   background-color: @color5;
@@ -254,7 +234,7 @@ progressbar {
   background-color: @color0;
   border-radius: 16px;
 }
- 
+
 .widget-mpris-title {
   background-color: @color0;
   color: @color5;
@@ -262,31 +242,72 @@ progressbar {
   font-size: 1.1rem;
   padding: 3px 8px;
   border-radius: 6px;
-
 }
- 
+
 .widget-mpris-subtitle {
   background-color: @color0;
-    font-weight: 500;
-    font-size: 0.8rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
 /* Volume */
 .widget-volume {
   background: @color5;
   color: @background;
-  padding: 4px;
-  margin: 10px 6px;
+  margin: 6px 6px;
+  padding: 3px 3px;
   border-radius: 6px;
+  -gtk-outline-radius: 1.159rem;
+  -gtk-outline-radius: 1.159rem;
 }
 
+
+.widget-volume trough {
+  background: @color5;
+  color: @background;
+  margin: 3px 12px;
+  padding: 0px 0px;
+  border-radius: 6px;
+  background-color: @color0;
+}
+
+
+.widget-volume trough slider {
+  background-color: @color5;
+  margin: 3px 3px;
+  padding: 8px 8px;
+  border-radius: 25%;
+}
+
+
+
+/* Brightness */
 .widget-backlight {
   background: @color5;
   color: @background;
-  padding: 4px;
-  margin: 10px 6px;
+  margin: 6px 6px;
+  padding: 3px 3px;
   border-radius: 6px;
+  -gtk-outline-radius: 1.159rem;
+  -gtk-outline-radius: 1.159rem;
+}
+
+.widget-backlight trough {
+  background: @color5;
+  color: @background;
+  margin: 3px 12px;
+  padding: 0px 0px;
+  border-radius: 6px;
+  background-color: @color0;
+}
+
+
+.widget-backlight trough slider {
+  color:unset;
+  background-color: @color5;
+  margin: 3px 3px;
+  padding: 8px 8px;
+  border-radius: 25%;
 }

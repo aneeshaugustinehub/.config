@@ -32,7 +32,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       400px;
-    height:                      140px;
+    height:                      195px;
     x-offset:                    -10px;
     y-offset:                    0px;
 

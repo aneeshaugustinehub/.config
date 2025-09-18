@@ -1,2 +1,28 @@
 @import 'themes/notifications.css';
 @import 'themes/central_control.css';
+
+@import url("/home/av/.config/color/color.css");
+
+
+
+/* Mpris widget */
+
+.widget-mpris {
+  background-color: rgba(28, 28, 34, 0.35);
+  margin: 8px;  
+  border-radius: 1.159rem;
+  -gtk-outline-radius: 1.159rem;  
+}
+
+.widget-mpris-player {
+  margin: 8px;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1.1rem;
+}
