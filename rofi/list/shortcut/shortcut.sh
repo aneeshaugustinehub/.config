@@ -1,25 +1,25 @@
 #!/bin/bash
 
 choices=$(cat <<EOF
-⌘ + T             ⟹ Open Terminal
-⌘ + ⇧ + T         ⟹ Float Terminal
+⌘ + Enter         ⟹ Open Terminal
+⌘ + ⇧ + Enter     ⟹ Float Terminal
 ⌘ + B             ⟹ Open Browser
-⌘ + W             ⟹ Kill Active Window
-⌘ + V             ⟹ Toggle Floating
+⌘ + Esc           ⟹ Kill Active Window
+⌘ + F             ⟹ Toggle Floating
 ⌘ + F             ⟹ Fullscreen On
-⌘ + G             ⟹ Fullscreen Off
-⌘ + E             ⟹ Open Yazi File Manager
+⌘ + F             ⟹ Fullscreen Off
+⌘ + E             ⟹ Open File Manager
 ⌘ + P             ⟹ Open Power Menu
-⌘ + [⎵]           ⟹ Rofi App Launcher
-⌘ + ⇧ + R         ⟹ Wallpaper Picker
-⌘ + ⇧ + S         ⟹ Screenshot to Clipboard
-⌥ + ⇧ + S         ⟹ Save Screenshot to File
-⌥ + ⇧ + W         ⟹ Toggle Waybar
-⌃ + ⇧ + W         ⟹ Restart Waybar
-⌃ + ⇧ + Tab       ⟹ Task Manager
+⌘ + [⎵]           ⟹ App Launcher
+⌘ + W             ⟹ Wallpaper Picker
+PrtSc             ⟹ Screenshot to Clipboard
+PrtSc             ⟹ Save Screenshot to File
+⌘ + ⇧ + R         ⟹ Toggle Waybar
+⌘ + ⇧ + R         ⟹ Restart Waybar
+⌘ + ⇧ + Tab       ⟹ Task Manager
 ⌘ + C             ⟹ Color Picker
 ⌘ + I             ⟹ Random Wallpaper + Hyprpaper
-⌘ + M             ⟹ Clipboard Launcher
+⌘ + V             ⟹ Clipboard Launcher
 EOF
 )
 

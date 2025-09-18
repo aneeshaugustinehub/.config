@@ -229,7 +229,7 @@
     },
     
     "custom/all-settings": {
-        "format": "",
+        "format": "⌘",
         "on-click": "~/.config/rofi/rofi-list.sh",
         "tooltip": false,
     },    
